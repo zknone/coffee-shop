@@ -1,9 +1,9 @@
 @import "../mixins/mixins";
 
-.menu__nav-list {
+.menu {
     @include reset-flex-list;
 }
 
-.menu__nav-link {
+.menu__link {
     @include menu-link;
 }

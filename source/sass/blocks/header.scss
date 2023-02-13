@@ -1,23 +1,18 @@
 @import "../mixins/mixins";
 
-.title {
-  @include reset;
-  font-family: "Montserrat", Helvetica, sans-serif;
-  font-weight: 700;
+.header {
+  @include reset-flex-list;
+  justify-content: space-between;
+}
 
-  &--h1 {
-    @include h1;
-  }
+.header__nav-list {
+  @include reset-flex-list;
+}
 
-  &--h2 {
-    @include h2;
-  }
-
-  &--h3 {
-    @include h3;
-  }
-
-  &--h4 {
-    @include h4;
-  }
+.header__utility-list {
+  @include reset-flex-list;
+}
+.header__utiliy-item {
+}
+.header__utility-link {
 }

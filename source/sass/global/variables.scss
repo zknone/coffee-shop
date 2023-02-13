@@ -1,9 +1,15 @@
 /* здесь используйте глобальные переменные */
-$tablet-width: 768px;
-$desktop-width: 1440px;
-$mobile-width: 320px;
+$widths: (
+  "xs": 320px,
+  "md": 768px,
+  "lg": 1440px,
+);
 
+$gap-sm: 10px;
+$gap-md: 15px;
+$gap-lg: 25px;
 
+//заголовки
 $h1-size-mobile: 36px;
 $h1-size: 56px;
 $h1-lh-mobile: 48px;
@@ -22,18 +28,21 @@ $h3-lh: 36px;
 $h4-size: 14px;
 $h4-lh: 20px;
 
-$base-primary: #7859CF;
-$base-secondary: #F0EBFF;
+//шрифты
+
+//цвета
+$base-primary: #7859cf;
+$base-secondary: #f0ebff;
 $base-black: #333333;
-$base-grey: #BDBDBD;
-$base-white: #FFFFFF;
+$base-grey: #bdbdbd;
+$base-white: #ffffff;
 
 $alt-opace: rgba(120, 89, 207, 0.25);
-$alt-lighter: #9070EC;
-$alt-darker: #593CAC;
-$alt-grey: #E2E2E2;
+$alt-lighter: #9070ec;
+$alt-darker: #593cac;
+$alt-grey: #e2e2e2;
 
-$back-light-grey: #F8F8F8;
-$back-flat-white: #F3EBE1;
-$back-lavender-latte: #EAE6FC;
-$back-espresso: #E5E6E8;
+$back-light-grey: #f8f8f8;
+$back-flat-white: #f3ebe1;
+$back-lavender-latte: #eae6fc;
+$back-espresso: #e5e6e8;

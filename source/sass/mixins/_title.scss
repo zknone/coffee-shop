@@ -1,0 +1,39 @@
+@import "../global/variables";
+
+@mixin h1 {
+  font-size: $h1-size-mobile;
+  line-height: $h1-lh-mobile;
+
+  @include media-min(md) {
+    font-size: $h1-size;
+    line-height: $h1-lh;
+  }
+}
+
+@mixin h2 {
+  @include h1;
+  font-size: $h2-size-mobile;
+  line-height: $h2-lh-mobile;
+
+  @include media-min(md) {
+    font-size: $h2-size;
+    line-height: $h2-lh;
+  }
+}
+
+@mixin h3 {
+  @include h1;
+  font-size: $h3-size-mobile;
+  line-height: $h3-lh-mobile;
+
+  @include media-min(md) {
+    font-size: $h3-size;
+    line-height: $h3-lh;
+  }
+}
+
+@mixin h4 {
+  font-size: $h4-size;
+  line-height: $h4-lh;
+  color: $base-primary;
+}

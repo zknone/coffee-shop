@@ -1,8 +1,5 @@
 @import "../mixins/mixins";
 
 .button {
-  &--icon {
-    @include btn-bucket;
-  }
   @include btn;
 }

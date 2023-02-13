@@ -1,36 +1,35 @@
 @import "../global/variables";
 
 @mixin btn {
-    font-family: 'Montserrat', Helvetica, sans-serif;
-    margin: 0;
-    padding: 8px 20px;
-    background-color: $base-primary;
-    color: $base-white;
-    border: none;
-    border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  margin: 0;
+  padding: 8px 20px;
+  background-color: $base-primary;
+  color: $base-white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  line-height: inherit;
+  text-decoration: none;
 
-    &:hover, :focus{
-        background-color: $alt-lighter;
-    }
+  &:hover,
+  :focus {
+    background-color: $alt-lighter;
+  }
 
-    &:active {
-        background-color: $alt-darker;
-    }
+  &:active {
+    background-color: $alt-darker;
+  }
 
-    &:disabled {
-        background-color: $base-grey;
-    }
-}
+  &:disabled {
+    background-color: $base-grey;
+    cursor: progress;
+  }
 
-@mixin btn-bucket {
-    @include btn;
-
-    &::before {
-        content: 'ic';
-        display: block;
-        position: relative;
-        width: 20px;
-        height: 16px;
-        padding-right: 6px;
-    }
+  > svg {
+    margin-right: 5px;
+    margin-left: -5px;
+  }
 }

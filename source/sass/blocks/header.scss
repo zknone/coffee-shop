@@ -1,5 +1,23 @@
-.header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+@import "../mixins/mixins";
+
+.title {
+  @include reset;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-weight: 700;
+
+  &--h1 {
+    @include h1;
+  }
+
+  &--h2 {
+    @include h2;
+  }
+
+  &--h3 {
+    @include h3;
+  }
+
+  &--h4 {
+    @include h4;
+  }
 }

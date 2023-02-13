@@ -1,0 +1,23 @@
+@import "../global/variables";
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin reset-list {
+    @include reset;
+    list-style: none;
+}
+
+@mixin reset-flex-list ($column-gap: 20px) {
+    @include reset-list;
+    display: flex;
+    column-gap: $column-gap;
+}
+
+@mixin reset-flex-column-list($row-gap: 12px) {
+    @include reset-flex-list;
+    row-gap: $row-gap;
+    flex-direction: column;
+}

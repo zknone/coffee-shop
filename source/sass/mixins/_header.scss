@@ -1,0 +1,8 @@
+@import "../global/variables";
+
+@mixin header {
+    @include reset;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: $h1-size-mobile;
+    line-height: $h1-lh-mobile;
+}

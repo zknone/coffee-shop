@@ -1,1 +1,44 @@
 @import "../global/variables";
+
+@mixin text {
+  font-size: $text-size-mobile;
+  line-height: $text-lh-mobile;
+  text-align: center;
+  color: $base-black;
+
+  @include media-min(md) {
+    font-size: $text-size;
+    line-height: $text-lh;
+  }
+
+  @include media-min(lg) {
+    font-size: $text-size;
+    line-height: $text-lh;
+    text-align: left;
+  }
+}
+
+@mixin slider-text {
+    font-size: $text-slider-size-mobile;
+    line-height: $text-slider-lh-mobile;
+    text-align: center;
+    color: $base-black;
+  
+    @include media-min(md) {
+      font-size: $text-slider-size;
+      line-height: $text-slider-lh;
+    }
+  
+    @include media-min(lg) {
+      font-size: $text-slider-size;
+      line-height: $text-slider-lh;
+      text-align: left;
+    }
+  }
+
+  @mixin filter-text {
+    font-size: $text-filter-size;
+    line-height: $text-filter-lh;
+    text-align: left;
+    color: $base-black;
+  }

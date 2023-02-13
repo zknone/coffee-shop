@@ -3,10 +3,18 @@
 @mixin h1 {
   font-size: $h1-size-mobile;
   line-height: $h1-lh-mobile;
+  text-align: center;
+  color: $base-black;
 
   @include media-min(md) {
     font-size: $h1-size;
     line-height: $h1-lh;
+  }
+
+  @include media-min(lg) {
+    font-size: $h1-size;
+    line-height: $h1-lh;
+    text-align: left;
   }
 }
 
@@ -19,6 +27,12 @@
     font-size: $h2-size;
     line-height: $h2-lh;
   }
+
+  @include media-min(lg) {
+    font-size: $h2-size;
+    line-height: $h2-lh;
+    text-align: left;
+  }
 }
 
 @mixin h3 {
@@ -29,6 +43,12 @@
   @include media-min(md) {
     font-size: $h3-size;
     line-height: $h3-lh;
+  }
+
+  @include media-min(lg) {
+    font-size: $h3-size;
+    line-height: $h3-lh;
+    text-align: left;
   }
 }
 

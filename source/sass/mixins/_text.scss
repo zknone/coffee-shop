@@ -1,6 +1,8 @@
 @import "../global/variables";
 
 @mixin text {
+  @include reset;
+  font-family: "Montserrat", Helvetica, sans-serif;
   font-size: $text-size-mobile;
   line-height: $text-lh-mobile;
   text-align: center;

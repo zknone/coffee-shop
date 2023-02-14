@@ -13,6 +13,7 @@
 @mixin reset-flex-list ($column-gap: 20px) {
     @include reset-list;
     display: flex;
+    flex-direction: row;
     column-gap: $column-gap;
 }
 

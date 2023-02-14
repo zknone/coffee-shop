@@ -1,9 +1,13 @@
 @import "../mixins/mixins";
 
 .menu {
+  @include reset-flex-column-list;
+  flex-direction: column;
+  @include media-min(md) {
     @include reset-flex-list;
+  }
 }
 
 .menu__link {
-    @include menu-link;
+  @include menu-link;
 }

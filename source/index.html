@@ -8,7 +8,12 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <picture class="header__logo"></picture>
+      <div class="header__logo-wrapper">
+        <picture class="header__logo"></picture>
+        <span class="header__logo-text">
+          Интернет-магазин кофейных напитков
+        </span>
+      </div>
       <ul class="header__nav-list menu">
         <li class="menu__item">
           <a href="" class="menu__link menu__link--active">Главная</a>
@@ -25,7 +30,15 @@
       </ul>
       <ul class="header__utility-list">
         <li class="header__utiliy-item">
-          <a href="" class="header__utility-link">
+          <a href="" class="header__utility-link" id="utility-link-enter">
+            <svg class="header__utility-icon" width="16" height="16"></svg>
+            <span class="header__utility-link"> Войти </span>
+          </a>
+        </li>
+        <li class="header__utiliy-item">
+          <a href="" class="header__utility-link" id="utility-link-shop">
+            <svg class="header__utility-icon" width="16" height="16"></svg>
+            <span class="header__utility-link"> Корзина </span>
           </a>
         </li>
       </ul>

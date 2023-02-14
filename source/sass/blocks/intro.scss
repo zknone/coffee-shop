@@ -2,6 +2,7 @@
 
 .intro {
   @include container;
+  @include reset-flex-list;
   background-color: $back-flat-white;
 }
 

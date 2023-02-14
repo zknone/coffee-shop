@@ -22,12 +22,9 @@
 }
 
 @mixin slider-text {
-  font-family: "Montserrat", Helvetica, sans-serif;
-  font-weight: 400;
+  @include text;
   font-size: $text-slider-size-mobile;
   line-height: $text-slider-lh-mobile;
-  text-align: center;
-  color: $base-black;
 
   @include media-min(md) {
     font-size: $text-slider-size;

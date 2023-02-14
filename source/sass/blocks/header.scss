@@ -18,9 +18,8 @@
 }
 
 .header__nav-list {
-
   @include media-max(md) {
-    order: 3; 
+    order: 3;
     width: 100%;
 
     &--closed {
@@ -38,7 +37,7 @@
   @include svg-link;
   > span {
     display: none;
-    @include media-min(lg){
+    @include media-min(lg) {
       @include reset;
       display: inline-block;
     }

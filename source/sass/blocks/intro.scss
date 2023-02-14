@@ -1,5 +1,10 @@
 @import "../mixins/mixins";
 
-.intro__text {
-    @include text;
+.intro {
+  @include container;
+  background-color: $back-flat-white;
+}
+
+.intro__swiper-description {
+  @include text;
 }

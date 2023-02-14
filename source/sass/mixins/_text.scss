@@ -35,8 +35,6 @@
   }
 
   @include media-min(lg) {
-    font-size: $text-slider-size;
-    line-height: $text-slider-lh;
     text-align: left;
   }
 }

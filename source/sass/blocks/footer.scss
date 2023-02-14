@@ -2,17 +2,33 @@
 
 .footer {
   @include container;
-  @include reset-flex-list;
-  justify-content: space-between;
+}
+
+.footer__menu-section {
+  display: none;
+  @include media-min(md) {
+    @include reset-flex-list;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+}
+
+.footer__logo-wrapper {
+  width: 100%;
+
+  > span {
+    display: none;
+    @include media-min(lg) {
+      display: inline-block;
+      @include footer-logo-text;
+    }
+  }
 }
 
 .footer__logo-social-wrapper {
 }
-.footer__logo-wrapper {
-  > span {
-    @include footer-logo-text;
-  }
-}
+
 .footer__logo {
 }
 .footer__menu {

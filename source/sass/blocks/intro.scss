@@ -5,6 +5,43 @@
   background-color: $back-flat-white;
 }
 
+.intro__swiper-card {
+  position: relative;
+}
+
+.intro__swiper-img {
+  position: relative;
+}
+
+.intro__swiper-text-block {
+  @include reset-flex-column-list;
+  align-items: center;
+  @include media-min(lg) {
+    align-items: flex-start;
+  }
+}
+
+.intro__swiper-category {
+  @include h4;
+}
+.intro__swiper-header {
+  @include h1;
+}
 .intro__swiper-description {
-  @include text;
+  @include slider-text;
+}
+.intro__conversion-wrapper {
+}
+.intro__previous-price {
+}
+.intro__actual-price {
+}
+
+.intro__conversion-button {
+}
+
+.intro__left-button {
+}
+
+.intro__right-button {
 }

@@ -1,6 +1,7 @@
 @import "../mixins/mixins";
 
 .header {
+  @include container;
   @include reset-flex-list;
   flex-wrap: wrap;
   justify-content: space-between;

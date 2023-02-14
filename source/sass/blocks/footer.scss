@@ -1,0 +1,35 @@
+@import "../mixins/mixins";
+
+.footer {
+  @include container;
+  @include reset-flex-list;
+  justify-content: space-between;
+}
+
+.footer__logo-social-wrapper {
+}
+.footer__logo-wrapper {
+  > span {
+    @include footer-logo-text;
+  }
+}
+.footer__logo {
+}
+.footer__menu {
+  @include reset-flex-list(0);
+}
+.footer__menu-list {
+  width: 350px;
+  @include reset-flex-column-list(0);
+}
+.footer__menu-list-header {
+  @include h4;
+}
+.footer__menu-list-item {
+  > span {
+    @include footer-logo-text;
+  }
+}
+.footer__menu-link {
+  @include footer-link;
+}

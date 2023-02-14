@@ -1,10 +1,10 @@
 @import "../mixins/mixins";
 
 .menu {
-  @include reset-flex-column-list;
+  @include reset-flex-column-list(0);
   flex-direction: column;
   @include media-min(md) {
-    @include reset-flex-list;
+    @include reset-flex-list(0);
   }
 }
 

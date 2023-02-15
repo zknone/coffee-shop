@@ -3,7 +3,12 @@
 .intro {
   @include container;
   @include reset-flex-list;
+  justify-content: space-between;
   background-color: $back-flat-white;
+  padding: 20px 0 60px;
+  @include media-min(md) {
+    padding: 60px 0 308px;
+  }
 }
 
 .intro__swiper-card {
@@ -32,13 +37,12 @@
   @include slider-text;
 }
 .intro__conversion-wrapper {
+  @include reset-flex-list;
+  align-items: center;
 }
 .intro__previous-price {
 }
 .intro__actual-price {
-}
-
-.intro__conversion-button {
 }
 
 .intro__left-button {

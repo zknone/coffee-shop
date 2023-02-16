@@ -106,272 +106,274 @@
       <section class="catalog">
         <p class="catalog__category">Каталог</p>
         <h2 class="catalog__header">Каталог кофейных напитков</h2>
-        <form action="post" class="catalog__filter-form">
-          <fieldset class="catalog__price-field">
-            <legend class="catalog__price-field-header">Цена</legend>
-            <label class="catalog__price-range">
-              <span class="visually-hidden">Ползунок с плавающей ценой</span>
-              <button class="catalog__min-button"></button>
-              <input
-                type="range"
-                class="catalog__price-range"
-                min="0"
-                max="1000"
-              />
-              <button class="catalog__max-button"></button>
-            </label>
-            <label class="catalog__price-min">
-              <span class="visually-hidden">Минимальная цена</span>
-              <input
-                type="number"
-                class="catalog__price-input"
-                placeholder="0"
-                id="catalog-min-price"
-              />
-            </label>
-            <label class="catalog__price-max">
-              <span class="visually-hidden">Максимальная цена</span>
-              <input
-                type="number"
-                class="catalog__price-input"
-                placeholder="900"
-                id="catalog-max-price"
-              />
-            </label>
-          </fieldset>
-          <fieldset class="catalog__milk-field">
-            <legend class="catalog__milk-field-header">Наличие молока</legend>
-            <label class="catalog__milk-field-label">
-              <input
-                type="radio"
-                class="catalog__milk-field-input"
-                name="milk-type"
-                id="indifferent"
-              />
-              Неважно
-            </label>
-            <label class="catalog__milk-field-label">
-              <input
-                type="radio"
-                class="catalog__milk-field-input"
-                name="milk-type"
-                id="animal"
-              />
-              Только животное
-            </label>
-            <label class="catalog__milk-field-label">
-              <input
-                type="radio"
-                class="catalog__milk-field-input"
-                name="milk-type"
-                id="vegetal"
-              />
-              Только растительное
-            </label>
-            <label class="catalog__milk-field-label">
-              <input
-                type="radio"
-                class="catalog__milk-field-input"
-                name="milk-type"
-                id="no-milk"
-                disabled
-              />
-              Без молока
-            </label>
-          </fieldset>
-          <fieldset class="catalog__country-fied">
-            <legend class="catalog__country-field-header">
-              Страна произрастания
-            </legend>
-            <label class="catalog__country-field-label">
-              <input
-                class="catalog__country-field-input"
-                type="checkbox"
-                name="coiuntry"
-                id="brasil"
-              />
-              Бразилия
-            </label>
-            <label class="catalog__country-field-label">
-              <input
-                class="catalog__country-field-input"
-                type="checkbox"
-                name="coiuntry"
-                id="ethiopia"
-              />
-              Эфиопия
-            </label>
-            <label class="catalog__country-field-label">
-              <input
-                class="catalog__country-field-input"
-                type="checkbox"
-                name="coiuntry"
-                id="colombia"
-              />
-              Колумбия
-            </label>
-            <label class="catalog__country-field-label">
-              <input
-                class="catalog__country-field-input"
-                type="checkbox"
-                name="coiuntry"
-                id="costa-rica"
-              />
-              Коста-Рика
-            </label>
-            <label class="catalog__country-field-label">
-              <input
-                class="catalog__country-field-input"
-                type="checkbox"
-                name="coiuntry"
-                id="peru"
-                disabled
-              />
-              Перу
-            </label>
-          </fieldset>
-          <div class="catalog__button-wrapper">
-            <button type="submit" class="catalog__submit-button button">
-              Применить фильтр
-            </button>
-            <button type="reset" class="catalog__reset-button">
-              Сбросить фильтр
-            </button>
+        <div class="catalog__wrapper">
+          <form action="post" class="catalog__filter-form">
+            <fieldset class="catalog__price-field">
+              <legend class="catalog__price-field-header">Цена</legend>
+              <label class="catalog__price-range">
+                <span class="visually-hidden">Ползунок с плавающей ценой</span>
+                <button class="catalog__min-button"></button>
+                <input
+                  type="range"
+                  class="catalog__price-range"
+                  min="0"
+                  max="1000"
+                />
+                <button class="catalog__max-button"></button>
+              </label>
+              <label class="catalog__price-min">
+                <span class="visually-hidden">Минимальная цена</span>
+                <input
+                  type="number"
+                  class="catalog__price-input"
+                  placeholder="0"
+                  id="catalog-min-price"
+                />
+              </label>
+              <label class="catalog__price-max">
+                <span class="visually-hidden">Максимальная цена</span>
+                <input
+                  type="number"
+                  class="catalog__price-input"
+                  placeholder="900"
+                  id="catalog-max-price"
+                />
+              </label>
+            </fieldset>
+            <fieldset class="catalog__milk-field">
+              <legend class="catalog__milk-field-header">Наличие молока</legend>
+              <label class="catalog__milk-field-label">
+                <input
+                  type="radio"
+                  class="catalog__milk-field-input"
+                  name="milk-type"
+                  id="indifferent"
+                />
+                Неважно
+              </label>
+              <label class="catalog__milk-field-label">
+                <input
+                  type="radio"
+                  class="catalog__milk-field-input"
+                  name="milk-type"
+                  id="animal"
+                />
+                Только животное
+              </label>
+              <label class="catalog__milk-field-label">
+                <input
+                  type="radio"
+                  class="catalog__milk-field-input"
+                  name="milk-type"
+                  id="vegetal"
+                />
+                Только растительное
+              </label>
+              <label class="catalog__milk-field-label">
+                <input
+                  type="radio"
+                  class="catalog__milk-field-input"
+                  name="milk-type"
+                  id="no-milk"
+                  disabled
+                />
+                Без молока
+              </label>
+            </fieldset>
+            <fieldset class="catalog__country-fied">
+              <legend class="catalog__country-field-header">
+                Страна произрастания
+              </legend>
+              <label class="catalog__country-field-label">
+                <input
+                  class="catalog__country-field-input"
+                  type="checkbox"
+                  name="coiuntry"
+                  id="brasil"
+                />
+                Бразилия
+              </label>
+              <label class="catalog__country-field-label">
+                <input
+                  class="catalog__country-field-input"
+                  type="checkbox"
+                  name="coiuntry"
+                  id="ethiopia"
+                />
+                Эфиопия
+              </label>
+              <label class="catalog__country-field-label">
+                <input
+                  class="catalog__country-field-input"
+                  type="checkbox"
+                  name="coiuntry"
+                  id="colombia"
+                />
+                Колумбия
+              </label>
+              <label class="catalog__country-field-label">
+                <input
+                  class="catalog__country-field-input"
+                  type="checkbox"
+                  name="coiuntry"
+                  id="costa-rica"
+                />
+                Коста-Рика
+              </label>
+              <label class="catalog__country-field-label">
+                <input
+                  class="catalog__country-field-input"
+                  type="checkbox"
+                  name="coiuntry"
+                  id="peru"
+                  disabled
+                />
+                Перу
+              </label>
+            </fieldset>
+            <div class="catalog__button-wrapper">
+              <button type="submit" class="catalog__submit-button button">
+                Применить фильтр
+              </button>
+              <button type="reset" class="catalog__reset-button">
+                Сбросить фильтр
+              </button>
+            </div>
+          </form>
+          <div class="catalog__products-wrapper">
+            <select name="sort-by" id="sorting" class="catalog__sorting">
+              <option value="default" class="catalog__sorting-option">
+                По умолчанию
+              </option>
+              <option value="price-up" class="catalog__sorting-option">
+                Цена, по возрастанию
+              </option>
+              <option value="price-down" class="catalog__sorting-option">
+                Цена, по убыванию/option>
+              </option>
+            </select>
+            <ul class="catalog__products-list">
+              <li class="catalog__product-item">
+                <picture class="catalog__product-image"></picture>
+                <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
+                <p class="catalog__product-text">
+                  Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                </p>
+                <span class="catalog__product-price">225₽</span>
+                <buton class="catalog__product-button button">
+                  <svg
+                    class="catalog__product-button-icon"
+                    width="20"
+                    height="16"
+                  ></svg>
+                  В корзину</buton
+                >
+              </li>
+              <li class="catalog__product-item">
+                <picture class="catalog__product-image"></picture>
+                <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
+                <p class="catalog__product-text">
+                  Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                </p>
+                <span class="catalog__product-price">225₽</span>
+                <buton class="catalog__product-button button">
+                  <svg
+                    class="catalog__product-button-icon"
+                    width="20"
+                    height="16"
+                  ></svg>
+                  В корзину</buton
+                >
+              </li>
+              <li class="catalog__product-item">
+                <picture class="catalog__product-image"></picture>
+                <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
+                <p class="catalog__product-text">
+                  Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                </p>
+                <span class="catalog__product-price">225₽</span>
+                <buton class="catalog__product-button button">
+                  <svg
+                    class="catalog__product-button-icon"
+                    width="20"
+                    height="16"
+                  ></svg>
+                  В корзину</buton
+                >
+              </li>
+              <li class="catalog__product-item">
+                <picture class="catalog__product-image"></picture>
+                <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
+                <p class="catalog__product-text">
+                  Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                </p>
+                <span class="catalog__product-price">225₽</span>
+                <buton class="catalog__product-button button">
+                  <svg
+                    class="catalog__product-button-icon"
+                    width="20"
+                    height="16"
+                  ></svg>
+                  В корзину</buton
+                >
+              </li>
+              <li class="catalog__product-item">
+                <picture class="catalog__product-image"></picture>
+                <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
+                <p class="catalog__product-text">
+                  Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                </p>
+                <span class="catalog__product-price">225₽</span>
+                <buton class="catalog__product-button button">
+                  <svg
+                    class="catalog__product-button-icon"
+                    width="20"
+                    height="16"
+                  ></svg>
+                  В корзину</buton
+                >
+              </li>
+              <li class="catalog__product-item">
+                <picture class="catalog__product-image"></picture>
+                <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
+                <p class="catalog__product-text">
+                  Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                </p>
+                <span class="catalog__product-price">225₽</span>
+                <buton class="catalog__product-button button">
+                  <svg
+                    class="catalog__product-button-icon"
+                    width="20"
+                    height="16"
+                  ></svg>
+                  В корзину</buton
+                >
+              </li>
+            </ul>
+            <ul class="catalog__pagination" id="catalog-pagination">
+              <li class="catalog__pagination-item">
+                <button class="catalog__pagination-back-button">
+                  <svg class="catalog__pagination-back-button-icon"></svg>
+                  Назад
+                </button>
+              </li>
+              <li class="catalog__pagination-number-element">
+                <a href="" class="catalog__pagination-item-link">1</a>
+              </li>
+              <li class="catalog__pagination-number-element">
+                <a href="" class="catalog__pagination-item-link">2</a>
+              </li>
+              <li class="catalog__pagination-number-element">
+                <a href="" class="catalog__pagination-item-link">3</a>
+              </li>
+              <li class="catalog__pagination-item">
+                <button class="catalog__pagination-back-button">
+                  <svg class="catalog__pagination-forward-button-icon"></svg>
+                  Вперед
+                </button>
+              </li>
+            </ul>
           </div>
-        </form>
-        <div class="catalog__products-wrapper">
-          <select name="sort-by" id="sorting" class="catalog__sorting">
-            <option value="default" class="catalog__sorting-option">
-              По умолчанию
-            </option>
-            <option value="price-up" class="catalog__sorting-option">
-              Цена, по возрастанию
-            </option>
-            <option value="price-down" class="catalog__sorting-option">
-              Цена, по убыванию/option>
-            </option>
-          </select>
-          <ul class="catalog__products-list">
-            <li class="catalog__product-item">
-              <picture class="catalog__product-image"></picture>
-              <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
-              <p class="catalog__product-text">
-                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
-              </p>
-              <span class="catalog__product-price">225₽</span>
-              <buton class="catalog__product-button button">
-                <svg
-                  class="catalog__product-button-icon"
-                  width="20"
-                  height="16"
-                ></svg>
-                В корзину</buton
-              >
-            </li>
-            <li class="catalog__product-item">
-              <picture class="catalog__product-image"></picture>
-              <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
-              <p class="catalog__product-text">
-                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
-              </p>
-              <span class="catalog__product-price">225₽</span>
-              <buton class="catalog__product-button button">
-                <svg
-                  class="catalog__product-button-icon"
-                  width="20"
-                  height="16"
-                ></svg>
-                В корзину</buton
-              >
-            </li>
-            <li class="catalog__product-item">
-              <picture class="catalog__product-image"></picture>
-              <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
-              <p class="catalog__product-text">
-                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
-              </p>
-              <span class="catalog__product-price">225₽</span>
-              <buton class="catalog__product-button button">
-                <svg
-                  class="catalog__product-button-icon"
-                  width="20"
-                  height="16"
-                ></svg>
-                В корзину</buton
-              >
-            </li>
-            <li class="catalog__product-item">
-              <picture class="catalog__product-image"></picture>
-              <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
-              <p class="catalog__product-text">
-                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
-              </p>
-              <span class="catalog__product-price">225₽</span>
-              <buton class="catalog__product-button button">
-                <svg
-                  class="catalog__product-button-icon"
-                  width="20"
-                  height="16"
-                ></svg>
-                В корзину</buton
-              >
-            </li>
-            <li class="catalog__product-item">
-              <picture class="catalog__product-image"></picture>
-              <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
-              <p class="catalog__product-text">
-                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
-              </p>
-              <span class="catalog__product-price">225₽</span>
-              <buton class="catalog__product-button button">
-                <svg
-                  class="catalog__product-button-icon"
-                  width="20"
-                  height="16"
-                ></svg>
-                В корзину</buton
-              >
-            </li>
-            <li class="catalog__product-item">
-              <picture class="catalog__product-image"></picture>
-              <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
-              <p class="catalog__product-text">
-                Кофе без кофеина из Эфиопии с натуральным фермерским молоком
-              </p>
-              <span class="catalog__product-price">225₽</span>
-              <buton class="catalog__product-button button">
-                <svg
-                  class="catalog__product-button-icon"
-                  width="20"
-                  height="16"
-                ></svg>
-                В корзину</buton
-              >
-            </li>
-          </ul>
-          <ul class="catalog__pagination" id="catalog-pagination">
-            <li class="catalog__pagination-item">
-              <button class="catalog__pagination-back-button">
-                <svg class="catalog__pagination-back-button-icon"></svg>
-                Назад
-              </button>
-            </li>
-            <li class="catalog__pagination-number-element">
-              <a href="" class="catalog__pagination-item-link">1</a>
-            </li>
-            <li class="catalog__pagination-number-element">
-              <a href="" class="catalog__pagination-item-link">2</a>
-            </li>
-            <li class="catalog__pagination-number-element">
-              <a href="" class="catalog__pagination-item-link">3</a>
-            </li>
-            <li class="catalog__pagination-item">
-              <button class="catalog__pagination-back-button">
-                <svg class="catalog__pagination-forward-button-icon"></svg>
-                Вперед
-              </button>
-            </li>
-          </ul>
         </div>
       </section>
     </main>

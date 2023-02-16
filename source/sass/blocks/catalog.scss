@@ -3,6 +3,14 @@
 .catalog {
   @include container;
 }
+
+.catalog__wrapper {
+  @include reset-flex-column-list;
+  @include media-min(lg) {
+    flex-direction: row;
+  }
+}
+
 .catalog__category {
   @include h4(center);
 }
@@ -33,27 +41,29 @@
 }
 
 .catalog__price-input {
-  width: auto;
 }
 
 .catalog__min-button {
 }
 
 .catalog__price-range {
-  max-width: 80%;
 }
 
 .catalog__price-min {
-  max-width: 30%;
 }
 
 .catalog__price-max {
-  max-width: 30%;
 }
 
 .catalog__max-button {
 }
 .catalog__milk-field {
+  @include reset-flex-list;
+  flex-wrap: wrap;
+  width: 280px;
+  @include media-min(md) {
+    max-width: 30%;
+  }
 }
 .catalog__milk-field-header {
   @include label;
@@ -63,6 +73,12 @@
 .catalog__milk-field-input {
 }
 .catalog__country-fied {
+  @include reset-flex-list;
+  flex-wrap: wrap;
+  width: 280px;
+  @include media-min(md) {
+    max-width: 30%;
+  }
 }
 .catalog__country-field-header {
   @include label;

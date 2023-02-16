@@ -15,9 +15,22 @@
   }
 
   @include media-min(lg) {
+    text-align: left;
+  }
+}
+
+@mixin label {
+  @include reset;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: $text-size-mobile;
+  line-height: $text-lh-mobile;
+  text-align: left;
+  color: $base-black;
+
+  @include media-min(md) {
     font-size: $text-size;
     line-height: $text-lh;
-    text-align: left;
   }
 }
 

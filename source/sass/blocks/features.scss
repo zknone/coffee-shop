@@ -1,16 +1,42 @@
 @import "../mixins/mixins";
 
 .features {
+  @include container;
+  @include reset-flex-column-list(0);
+  background-color: $base-white;
 }
 .features__category {
+  @include h4(center);
 }
 .features__header {
+  @include h1(center);
 }
 .features__list {
+  @include reset-flex-column-list(0);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  @include media-min(md) {
+    flex-direction: row;
+    width: auto;
+  }
 }
 .features__item {
+  max-width: 350px;
+  @include media-min(md) {
+    min-width: 350px;
+    max-width: 40%;
+  }
 }
 .features__item-icon {
+  display: block;
+  margin: 0 auto;
 }
+
 .features__item-header {
+  @include h2(center);
+}
+
+.features__item-text {
+  @include text;
 }

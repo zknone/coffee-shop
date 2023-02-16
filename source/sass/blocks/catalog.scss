@@ -1,1 +1,135 @@
 @import "../mixins/mixins";
+
+.catalog {
+  @include container;
+}
+.catalog__category {
+  @include h4(center);
+}
+.catalog__header {
+  @include h1(center);
+}
+
+.catalog__filter-form {
+  @include reset-flex-column-list(0);
+  @include media-min(md) {
+    flex-direction: row;
+  }
+  @include media-min(lg) {
+    flex-direction: column;
+  }
+}
+.catalog__price-field {
+  @include reset-flex-list;
+  flex-wrap: wrap;
+  width: 280px;
+  @include media-min(md) {
+    max-width: 30%;
+  }
+}
+
+.catalog__price-field-header {
+  @include label;
+}
+
+.catalog__price-input {
+  width: auto;
+}
+
+.catalog__min-button {
+}
+
+.catalog__price-range {
+  max-width: 80%;
+}
+
+.catalog__price-min {
+  max-width: 30%;
+}
+
+.catalog__price-max {
+  max-width: 30%;
+}
+
+.catalog__max-button {
+}
+.catalog__milk-field {
+}
+.catalog__milk-field-header {
+  @include label;
+}
+.catalog__milk-field-label {
+}
+.catalog__milk-field-input {
+}
+.catalog__country-fied {
+}
+.catalog__country-field-header {
+  @include label;
+}
+.catalog__country-field-label {
+}
+.catalog__country-field-input {
+}
+.catalog__button-wrapper {
+}
+.catalog__submit-button {
+}
+.button {
+}
+.catalog__reset-button {
+}
+.catalog__sorting {
+}
+.catalog__sorting-option {
+}
+.catalog__products-wrapper {
+}
+.catalog__products-list {
+  @include reset-flex-column-list(10px);
+  @include media-min(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-min(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.catalog__product-item {
+  max-width: 280px;
+  margin: 0 auto;
+  @include media-min(md) {
+    max-width: 349px;
+  }
+
+  @include media-min(lg) {
+    max-width: 319px;
+  }
+}
+.catalog__product-image {
+}
+.catalog__product-header {
+}
+.catalog__product-text {
+}
+.catalog__product-price {
+}
+.catalog__product-button {
+}
+.catalog__product-button-icon {
+}
+.catalog__pagination {
+}
+.catalog__pagination-item {
+}
+.catalog__pagination-back-button {
+}
+.catalog__pagination-back-button-icon {
+}
+.catalog__pagination-number-element {
+}
+.catalog__pagination-item-link {
+}
+.catalog__pagination-forward-button-icon {
+}

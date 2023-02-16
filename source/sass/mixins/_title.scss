@@ -1,6 +1,6 @@
 @import "../global/variables";
 
-@mixin h1 {
+@mixin h1($align-position: left) {
   @include reset;
   font-family: "Montserrat", Helvetica, sans-serif;
   font-weight: 700;
@@ -17,11 +17,11 @@
   @include media-min(lg) {
     font-size: $h1-size;
     line-height: $h1-lh;
-    text-align: left;
+    text-align: $align-position;
   }
 }
 
-@mixin h2 {
+@mixin h2($align-position: left) {
   @include h1;
   font-size: $h2-size-mobile;
   line-height: $h2-lh-mobile;
@@ -34,11 +34,11 @@
   @include media-min(lg) {
     font-size: $h2-size;
     line-height: $h2-lh;
-    text-align: left;
+    text-align: $align-position;
   }
 }
 
-@mixin h3 {
+@mixin h3($align-position: left) {
   @include h1;
   font-size: $h3-size-mobile;
   line-height: $h3-lh-mobile;
@@ -51,15 +51,16 @@
   @include media-min(lg) {
     font-size: $h3-size;
     line-height: $h3-lh;
-    text-align: left;
+    text-align: $align-position;
   }
 }
 
-@mixin h4 {
+@mixin h4($align-position: left) {
   @include reset;
   font-family: "Montserrat", Helvetica, sans-serif;
   font-weight: 700;
   font-size: $h4-size;
   line-height: $h4-lh;
   color: $base-primary;
+  text-align: $align-position;
 }

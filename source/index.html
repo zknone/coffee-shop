@@ -9,7 +9,7 @@
   <body>
     <header class="header">
       <div class="header__logo-wrapper">
-        <picture class="header__logo">
+        <picture>
           <source
             media="(min-width: 1440px)"
             srcset="./img/logo-desktop.svg"
@@ -23,7 +23,7 @@
             height="36"
           />
           <img
-            class="nav__logo-img"
+            class="header__logo"
             src="./img/logo-mob.svg"
             alt="Логотип Drink2Go."
             width="32"
@@ -87,22 +87,61 @@
         <h2 class="visually-hidden">Наши новинки</h2>
         <button class="intro__left-button"></button>
         <div class="intro__swiper-card">
-          <picture class="intro__swiper-img">
+          <picture>
             <source
               media="(min-width: 1440px)"
-              srcset="./img/flat-white-desktop.png"
+              type="image/webp"
+              srcset="
+                ./img/flat-white-desktop.webp    1x,
+                ./img/flat-white-desktop@2x.webp 2x
+              "
               width="600"
               height="600"
             />
             <source
               media="(min-width: 768px)"
-              srcset="./img/flat-white-tablet.png"
+              type="image/webp"
+              srcset="
+                ./img/flat-white-tablet.webp    1x,
+                ./img/flat-white-tablet@2x.webp 2x
+              "
+              width="476"
+              height="476"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                ./img/flat-white-mobile.webp    1x,
+                ./img/flat-white-mobile@2x.webp 2x
+              "
+              width="280"
+              height="280"
+            />
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                ./img/flat-white-desktop.png    1x,
+                ./img/flat-white-desktop@2x.png 2x
+              "
+              width="600"
+              height="600"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ./img/flat-white-tablet.png    1x,
+                ./img/flat-white-tablet@2x.png 2x
+              "
               width="476"
               height="476"
             />
             <img
-              class="nav__logo-img"
+              class="intro__swiper-img"
               src="./img/flat-white-mobile.png"
+              srcset="
+                ./img/flat-white-mobile.png    1x,
+                ./img/flat-white-mobile@2x.png 2x
+              "
               alt="Изображение банки с флетвайтом."
               width="280"
               height="280"
@@ -342,7 +381,28 @@
             </select>
             <ul class="catalog__products-list">
               <li class="catalog__product-item">
-                <picture class="catalog__product-image"></picture>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/coffee-can-1.webp    1x,
+                      ./img/coffee-can-1@2x.webp 2x
+                    "
+                    width="130"
+                    height="188"
+                  />
+                  <img
+                    class="catalog__product-image"
+                    src="./img/coffee-can-1.png"
+                    srcset="
+                      ./img/coffee-can-1.png    1x,
+                      ./img/coffee-can-1@2x.png 2x
+                    "
+                    alt="Изображение товара."
+                    width="130"
+                    height="188"
+                  />
+                </picture>
                 <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
                 <p class="catalog__product-text">
                   Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -356,13 +416,36 @@
                     height="16"
                     focusable="false"
                   >
-                    <use xlink:href="./img/icons/stack.svg#add-button-icon"></use>
+                    <use
+                      xlink:href="./img/icons/stack.svg#add-button-icon"
+                    ></use>
                   </svg>
                   В корзину</buton
                 >
               </li>
               <li class="catalog__product-item">
-                <picture class="catalog__product-image"></picture>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/coffee-can-2.webp    1x,
+                      ./img/coffee-can-2@2x.webp 2x
+                    "
+                    width="130"
+                    height="188"
+                  />
+                  <img
+                    class="catalog__product-image"
+                    src="./img/coffee-can-2.png"
+                    srcset="
+                      ./img/coffee-can-2.png    1x,
+                      ./img/coffee-can-2@2x.png 2x
+                    "
+                    alt="Изображение товара."
+                    width="130"
+                    height="188"
+                  />
+                </picture>
                 <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
                 <p class="catalog__product-text">
                   Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -376,13 +459,36 @@
                     height="16"
                     focusable="false"
                   >
-                    <use xlink:href="./img/icons/stack.svg#add-button-icon"></use>
+                    <use
+                      xlink:href="./img/icons/stack.svg#add-button-icon"
+                    ></use>
                   </svg>
                   В корзину</buton
                 >
               </li>
               <li class="catalog__product-item">
-                <picture class="catalog__product-image"></picture>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/coffee-can-3.webp    1x,
+                      ./img/coffee-can-3@2x.webp 2x
+                    "
+                    width="130"
+                    height="188"
+                  />
+                  <img
+                    class="catalog__product-image"
+                    src="./img/coffee-can-3.png"
+                    srcset="
+                      ./img/coffee-can-3.png    1x,
+                      ./img/coffee-can-3@2x.png 2x
+                    "
+                    alt="Изображение товара."
+                    width="130"
+                    height="188"
+                  />
+                </picture>
                 <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
                 <p class="catalog__product-text">
                   Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -396,13 +502,36 @@
                     height="16"
                     focusable="false"
                   >
-                    <use xlink:href="./img/icons/stack.svg#add-button-icon"></use>
+                    <use
+                      xlink:href="./img/icons/stack.svg#add-button-icon"
+                    ></use>
                   </svg>
                   В корзину</buton
                 >
               </li>
               <li class="catalog__product-item">
-                <picture class="catalog__product-image"></picture>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/coffee-can-4.webp    1x,
+                      ./img/coffee-can-4@2x.webp 2x
+                    "
+                    width="130"
+                    height="188"
+                  />
+                  <img
+                    class="catalog__product-image"
+                    src="./img/coffee-can-4.png"
+                    srcset="
+                      ./img/coffee-can-4.png    1x,
+                      ./img/coffee-can-4@2x.png 2x
+                    "
+                    alt="Изображение товара."
+                    width="130"
+                    height="188"
+                  />
+                </picture>
                 <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
                 <p class="catalog__product-text">
                   Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -416,13 +545,36 @@
                     height="16"
                     focusable="false"
                   >
-                    <use xlink:href="./img/icons/stack.svg#add-button-icon"></use>
+                    <use
+                      xlink:href="./img/icons/stack.svg#add-button-icon"
+                    ></use>
                   </svg>
                   В корзину</buton
                 >
               </li>
               <li class="catalog__product-item">
-                <picture class="catalog__product-image"></picture>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/coffee-can-5.webp    1x,
+                      ./img/coffee-can-5@2x.webp 2x
+                    "
+                    width="130"
+                    height="188"
+                  />
+                  <img
+                    class="catalog__product-image"
+                    src="./img/coffee-can-5.png"
+                    srcset="
+                      ./img/coffee-can-5.png    1x,
+                      ./img/coffee-can-5@2x.png 2x
+                    "
+                    alt="Изображение товара."
+                    width="130"
+                    height="188"
+                  />
+                </picture>
                 <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
                 <p class="catalog__product-text">
                   Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -436,13 +588,36 @@
                     height="16"
                     focusable="false"
                   >
-                    <use xlink:href="./img/icons/stack.svg#add-button-icon"></use>
+                    <use
+                      xlink:href="./img/icons/stack.svg#add-button-icon"
+                    ></use>
                   </svg>
                   В корзину</buton
                 >
               </li>
               <li class="catalog__product-item">
-                <picture class="catalog__product-image"></picture>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/coffee-can-6.webp    1x,
+                      ./img/coffee-can-6@2x.webp 2x
+                    "
+                    width="130"
+                    height="188"
+                  />
+                  <img
+                    class="catalog__product-image"
+                    src="./img/coffee-can-6.png"
+                    srcset="
+                      ./img/coffee-can-6.png    1x,
+                      ./img/coffee-can-6@2x.png 2x
+                    "
+                    alt="Изображение товара."
+                    width="130"
+                    height="188"
+                  />
+                </picture>
                 <h3 class="catalog__product-header">Декаф Флэт Уайт</h3>
                 <p class="catalog__product-text">
                   Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -456,7 +631,9 @@
                     height="16"
                     focusable="false"
                   >
-                    <use xlink:href="./img/icons/stack.svg#add-button-icon"></use>
+                    <use
+                      xlink:href="./img/icons/stack.svg#add-button-icon"
+                    ></use>
                   </svg>
                   В корзину</buton
                 >
@@ -494,7 +671,15 @@
       <div class="footer__menu-section">
         <div class="footer__logo-social-wrapper">
           <div class="footer__logo-wrapper">
-            <picture class="footer__logo"></picture>
+            <picture>
+              <img
+                class="header__logo"
+                src="./img/logo-desktop.svg"
+                alt="Логотип Drink2Go."
+                width="170"
+                height="36"
+              />
+            </picture>
             <span>Интернет-магазин кофейных напитков</span>
           </div>
         </div>

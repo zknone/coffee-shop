@@ -9,7 +9,27 @@
   <body>
     <header class="header">
       <div class="header__logo-wrapper">
-        <picture class="header__logo"></picture>
+        <picture class="header__logo">
+          <source
+            media="(min-width: 1440px)"
+            srcset="./img/logo-desktop.svg"
+            width="170"
+            height="36"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="./img/logo-tablet.svg"
+            width="82"
+            height="36"
+          />
+          <img
+            class="nav__logo-img"
+            src="./img/logo-mob.svg"
+            alt="Логотип Drink2Go."
+            width="32"
+            height="36"
+          />
+        </picture>
         <span class="header__logo-text">
           Интернет-магазин кофейных напитков
         </span>

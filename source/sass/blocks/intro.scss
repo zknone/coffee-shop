@@ -2,12 +2,14 @@
 
 .intro {
   @include container;
-  @include reset-flex-list;
+  display: flex;
   justify-content: space-between;
   background-color: $back-flat-white;
-  padding: 20px 0 60px;
+  padding-top: 20px;
+  padding-bottom: 60px;
   @include media-min(md) {
-    padding: 60px 0 308px;
+    padding-top: 60px;
+    padding-bottom: 308px;
   }
 }
 

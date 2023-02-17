@@ -3,10 +3,9 @@
 @mixin container {
   box-sizing: border-box;
   min-width: map-get($widths, xs);
+  margin: 0 auto;
   padding-right: $gap-sm;
   padding-left: $gap-sm;
-  margin-right: auto;
-  margin-left: auto;
 
   @include media-min(md) {
     min-width: map-get($widths, md);

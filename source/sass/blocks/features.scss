@@ -2,14 +2,16 @@
 
 .features {
   @include container;
-  @include reset-flex-column-list(0);
+  display: flex;
+  flex-direction: column;
   background-color: $base-white;
 }
+
 .features__category {
   @include h4(center);
 }
 .features__header {
-  @include h1(center);
+  @include h2(center);
 }
 .features__list {
   @include reset-flex-column-list(0);

@@ -1,10 +1,23 @@
 @import "../mixins/mixins";
 
 .header {
-  @include container;
-  @include reset-flex-list;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.header__logo-wrapper {
+  display: flex;ß
+  align-items: center;
+
+  padding-left: $gap-sm;
+
+  @include media-min(md) {
+    padding-left: $gap-md;
+  }
+  @include media-min(lg) {
+    padding-left: $gap-lg;
+  }
 }
 
 .header__logo-text {
@@ -13,7 +26,7 @@
     @include logo-text;
     width: 160px;
     display: block;
-    padding: 24px 20px;
+    padding: 20px;
   }
 }
 
@@ -30,6 +43,15 @@
 
 .header__utility-list {
   @include reset-flex-list;
+
+  padding-right: $gap-sm;
+
+  @include media-min(md) {
+    padding-right: $gap-md;
+  }
+  @include media-min(lg) {
+    padding-right: $gap-lg;
+  }
 }
 .header__utiliy-item {
 }

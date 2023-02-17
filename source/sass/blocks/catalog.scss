@@ -20,6 +20,7 @@
 
 .catalog__filter-form {
   @include reset-flex-column-list(0);
+  margin: 0 auto;
   @include media-min(md) {
     flex-direction: row;
   }
@@ -96,6 +97,12 @@
 .catalog__reset-button {
 }
 .catalog__sorting {
+  display: block;
+  margin: 0 auto;
+  @include media-min(md) {
+    margin: 0 0 0 auto;
+  }
+
 }
 .catalog__sorting-option {
 }
@@ -136,6 +143,8 @@
 .catalog__product-button-icon {
 }
 .catalog__pagination {
+  @include reset-flex-list;
+  justify-content: end;
 }
 .catalog__pagination-item {
 }

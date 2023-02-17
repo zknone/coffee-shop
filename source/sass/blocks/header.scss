@@ -7,7 +7,7 @@
 }
 
 .header__logo-wrapper {
-  display: flex;ß
+  display: flex;
   align-items: center;
 
   padding-left: $gap-sm;
@@ -59,9 +59,10 @@
   @include svg-link;
   > span {
     display: none;
+    padding: 0;
+    margin: auto 0;
     @include media-min(lg) {
-      @include reset;
-      display: inline-block;
+      display: block;
     }
   }
 }

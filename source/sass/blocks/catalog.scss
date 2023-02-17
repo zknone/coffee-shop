@@ -141,6 +141,7 @@
 .catalog__product-button {
 }
 .catalog__product-button-icon {
+  margin-right: 5px;
 }
 .catalog__pagination {
   @include reset-flex-list;

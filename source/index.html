@@ -39,7 +39,7 @@
           <a href="" class="menu__link menu__link--active">Главная</a>
         </li>
         <li class="menu__item">
-          <a href="" class="menu__link">Каталог</a>
+          <a href="" class="menu__link"> Каталог</a>
         </li>
         <li class="menu__item">
           <a href="" class="menu__link">Доставка</a>
@@ -51,13 +51,29 @@
       <ul class="header__utility-list">
         <li class="header__utiliy-item">
           <a href="" class="header__utility-link" id="utility-link-enter">
-            <svg class="header__utility-icon" width="16" height="16"></svg>
+            <svg
+              class="header__utility-icon"
+              aria-label="Иконка каталога."
+              width="16"
+              height="16"
+              focusable="false"
+            >
+              <use xlink:href="./img/icons/stack.svg#user-icon"></use>
+            </svg>
             <span class="header__utility-link"> Войти </span>
           </a>
         </li>
         <li class="header__utiliy-item">
           <a href="" class="header__utility-link" id="utility-link-shop">
-            <svg class="header__utility-icon" width="16" height="16"></svg>
+            <svg
+              class="header__utility-icon"
+              aria-label="Иконка корзины."
+              width="16"
+              height="16"
+              focusable="false"
+            >
+              <use xlink:href="./img/icons/stack.svg#bucket-icon"></use>
+            </svg>
             <span class="header__utility-link"> Корзина </span>
           </a>
         </li>
@@ -71,7 +87,27 @@
         <h2 class="visually-hidden">Наши новинки</h2>
         <button class="intro__left-button"></button>
         <div class="intro__swiper-card">
-          <picture class="intro__swiper-img"></picture>
+          <picture class="intro__swiper-img">
+            <source
+              media="(min-width: 1440px)"
+              srcset="./img/flat-white-desktop.png"
+              width="600"
+              height="600"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="./img/flat-white-tablet.png"
+              width="476"
+              height="476"
+            />
+            <img
+              class="nav__logo-img"
+              src="./img/flat-white-mobile.png"
+              alt="Изображение банки с флетвайтом."
+              width="280"
+              height="280"
+            />
+          </picture>
           <div class="intro__swiper-text-block">
             <p class="intro__swiper-category">Новинка!</p>
             <h3 class="intro__swiper-header">Декаф Флэт Уайт</h3>
@@ -94,28 +130,60 @@
         <h2 class="features__header">Главные причины выбрать Drink2Go</h2>
         <ul class="features__list">
           <li class="features__item">
-            <svg class="features__item-icon" width="52" height="56"></svg>
+            <svg
+              class="features__item-icon"
+              aria-label="Иконка преимущества в скорости."
+              width="52"
+              height="56"
+              focusable="false"
+            >
+              <use xlink:href="./img/icons/stack.svg#speed-icon"></use>
+            </svg>
             <h3 class="features__item-header">Скорость</h3>
             <p class="features__item-text">
               Готовый напиток всегда под рукой — просто открой банку
             </p>
           </li>
           <li class="features__item">
-            <svg class="features__item-icon" width="52" height="56"></svg>
+            <svg
+              class="features__item-icon"
+              aria-label="Иконка преимущества в удобстве."
+              width="52"
+              height="56"
+              focusable="false"
+            >
+              <use xlink:href="./img/icons/stack.svg#fit-icon"></use>
+            </svg>
             <h3 class="features__item-header">Удобство</h3>
             <p class="features__item-text">
               Легко помещается и в карман, и в маленькую сумочку
             </p>
           </li>
           <li class="features__item">
-            <svg class="features__item-icon" width="52" height="56"></svg>
+            <svg
+              class="features__item-icon"
+              aria-label="Иконка преимущества в бодрости."
+              width="52"
+              height="56"
+              focusable="false"
+            >
+              <use xlink:href="./img/icons/stack.svg#energy-icon"></use>
+            </svg>
             <h3 class="features__item-header">Бодрость</h3>
             <p class="features__item-text">
               Сбалансированная доза кофеина даст мощный заряд энергии
             </p>
           </li>
           <li class="features__item">
-            <svg class="features__item-icon" width="52" height="56"></svg>
+            <svg
+              class="features__item-icon"
+              aria-label="Иконка преимущества в экологичности."
+              width="52"
+              height="56"
+              focusable="false"
+            >
+              <use xlink:href="./img/icons/stack.svg#ecology-icon"></use>
+            </svg>
             <h3 class="features__item-header">Экологичность</h3>
             <p class="features__item-text">
               Вся упаковка сделана из перерабатываемых материалов
@@ -283,9 +351,13 @@
                 <buton class="catalog__product-button button">
                   <svg
                     class="catalog__product-button-icon"
+                    aria-label="Иконка добавления в корзину."
                     width="20"
                     height="16"
-                  ></svg>
+                    focusable="false"
+                  >
+                    <use xlink:href="./img/icons/stack.svg#add-button-icon"></use>
+                  </svg>
                   В корзину</buton
                 >
               </li>
@@ -299,9 +371,13 @@
                 <buton class="catalog__product-button button">
                   <svg
                     class="catalog__product-button-icon"
+                    aria-label="Иконка добавления в корзину."
                     width="20"
                     height="16"
-                  ></svg>
+                    focusable="false"
+                  >
+                    <use xlink:href="./img/icons/stack.svg#add-button-icon"></use>
+                  </svg>
                   В корзину</buton
                 >
               </li>
@@ -315,9 +391,13 @@
                 <buton class="catalog__product-button button">
                   <svg
                     class="catalog__product-button-icon"
+                    aria-label="Иконка добавления в корзину."
                     width="20"
                     height="16"
-                  ></svg>
+                    focusable="false"
+                  >
+                    <use xlink:href="./img/icons/stack.svg#add-button-icon"></use>
+                  </svg>
                   В корзину</buton
                 >
               </li>
@@ -331,9 +411,13 @@
                 <buton class="catalog__product-button button">
                   <svg
                     class="catalog__product-button-icon"
+                    aria-label="Иконка добавления в корзину."
                     width="20"
                     height="16"
-                  ></svg>
+                    focusable="false"
+                  >
+                    <use xlink:href="./img/icons/stack.svg#add-button-icon"></use>
+                  </svg>
                   В корзину</buton
                 >
               </li>
@@ -347,9 +431,13 @@
                 <buton class="catalog__product-button button">
                   <svg
                     class="catalog__product-button-icon"
+                    aria-label="Иконка добавления в корзину."
                     width="20"
                     height="16"
-                  ></svg>
+                    focusable="false"
+                  >
+                    <use xlink:href="./img/icons/stack.svg#add-button-icon"></use>
+                  </svg>
                   В корзину</buton
                 >
               </li>
@@ -363,9 +451,13 @@
                 <buton class="catalog__product-button button">
                   <svg
                     class="catalog__product-button-icon"
+                    aria-label="Иконка добавления в корзину."
                     width="20"
                     height="16"
-                  ></svg>
+                    focusable="false"
+                  >
+                    <use xlink:href="./img/icons/stack.svg#add-button-icon"></use>
+                  </svg>
                   В корзину</buton
                 >
               </li>

@@ -14,6 +14,7 @@
 }
 
 .footer__logo-wrapper {
+  @include reset-flex-column-list(0);
   width: 100%;
 
   > span {
@@ -26,7 +27,17 @@
 }
 
 .footer__logo-social-wrapper {
+  @include media-min(md) {
+    width: 100%;
+    @include reset-flex-list(0);
+    justify-content: space-between;
+  }
+  @include media-min(lg) {
+    max-width: 320px;
+    flex-direction: column;
+  }
 }
+
 
 .footer__logo {
 }
@@ -47,4 +58,9 @@
 }
 .footer__menu-link {
   @include footer-link;
+}
+
+
+.footer__social-list {
+  @include reset-flex-list;
 }

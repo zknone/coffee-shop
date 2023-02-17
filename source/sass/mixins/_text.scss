@@ -67,8 +67,8 @@
   color: $base-black;
 }
 
-@mixin footer-logo-text {
+@mixin small-text {
   @include logo-text;
-  font-size: $footer-logo-text-size;
-  line-height: $footer-logo-text-lh;
+  font-size: $small-text-size;
+  line-height: $small-text-lh;
 }

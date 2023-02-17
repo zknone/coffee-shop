@@ -29,6 +29,10 @@
   }
 }
 
+.intro__conversion-button {
+  @include btn;
+}
+
 .intro__swiper-category {
   @include h4;
 }

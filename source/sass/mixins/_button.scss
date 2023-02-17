@@ -30,3 +30,9 @@
     cursor: progress;
   }
 }
+
+@mixin product-btn {
+  @include btn;
+  font-size: $small-text-size;
+  line-height: $small-text-lh;
+}

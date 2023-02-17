@@ -8,6 +8,7 @@
   @include reset-flex-column-list;
   @include media-min(lg) {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -25,10 +26,12 @@
     flex-direction: row;
   }
   @include media-min(lg) {
+    margin: 0;
     flex-direction: column;
   }
 }
 .catalog__price-field {
+  border: none;
   @include reset-flex-list;
   flex-wrap: wrap;
   width: 280px;
@@ -59,6 +62,7 @@
 .catalog__max-button {
 }
 .catalog__milk-field {
+  border: none;
   @include reset-flex-list;
   flex-wrap: wrap;
   width: 280px;
@@ -70,10 +74,12 @@
   @include label;
 }
 .catalog__milk-field-label {
+  @include filter-text;
 }
 .catalog__milk-field-input {
 }
 .catalog__country-fied {
+  border: none;
   @include reset-flex-list;
   flex-wrap: wrap;
   width: 280px;
@@ -85,15 +91,16 @@
   @include label;
 }
 .catalog__country-field-label {
+  @include filter-text;
 }
 .catalog__country-field-input {
 }
 .catalog__button-wrapper {
 }
 .catalog__submit-button {
+  @include btn;
 }
-.button {
-}
+
 .catalog__reset-button {
 }
 .catalog__sorting {
@@ -120,25 +127,39 @@
   }
 }
 .catalog__product-item {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 40% 60%;
   max-width: 280px;
   margin: 0 auto;
   @include media-min(md) {
     max-width: 349px;
+    grid-template-columns: 45% 55%;
   }
 
   @include media-min(lg) {
     max-width: 319px;
   }
+
+  > picture {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
 }
-.catalog__product-image {
-}
+
 .catalog__product-header {
+  grid-column: 1/-1;
 }
 .catalog__product-text {
+  grid-column: 1/-1;
+  @include small-text;
 }
 .catalog__product-price {
+  grid-column: 1/2;
 }
 .catalog__product-button {
+  grid-column: 2/-1;
+  @include product-btn;
 }
 .catalog__product-button-icon {
   margin-right: 5px;

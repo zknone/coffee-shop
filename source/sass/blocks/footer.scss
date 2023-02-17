@@ -21,7 +21,7 @@
     display: none;
     @include media-min(lg) {
       display: inline-block;
-      @include footer-logo-text;
+      @include small-text;
     }
   }
 }
@@ -53,7 +53,7 @@
 }
 .footer__menu-list-item {
   > span {
-    @include footer-logo-text;
+    @include small-text;
   }
 }
 .footer__menu-link {

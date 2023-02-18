@@ -17,8 +17,9 @@
     padding-left: $gap-lg;
   }
   @include media-min(xl) {
-    width: map-get($widths, xl);
+    min-width: map-get($widths, xl);
   }
+
 }
 
 @mixin sub-container {

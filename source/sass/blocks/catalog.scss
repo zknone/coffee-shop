@@ -44,21 +44,32 @@
 }
 .catalog__fieldset-wrapper {
   @include reset-flex-column-list(0);
+  justify-content: space-between;
   @include media-min(md) {
     flex-direction: row;
   }
   @include media-min(lg) {
     margin: 0;
     flex-direction: column;
+    column-gap: 22px;
   }
 }
 
 .catalog__price-field {
-  border: none;
-  margin: 0 0 32px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 0 auto;
   padding: 0;
-  display: grid;
-  grid-template-columns: 40% 20% 40%;
+  max-width: 290px;
+  border: none;
+}
+
+.catalog__milk-field,
+.catalog__country-field {
+  border: none;
+  @include reset-flex-column-list(21px);
+  margin: 0 0 auto;
 }
 
 .catalog__price-field-header,
@@ -66,10 +77,6 @@
 .catalog__country-field-header {
   @include label;
   margin-bottom: 20px;
-}
-
-.catalog__price-input {
-  width: 120px;
 }
 
 .catalog__min-button,
@@ -83,23 +90,20 @@
 
 .catalog__price-range {
   width: 100%;
-  grid-column: 1/-1;
+  height: fit-content;
 }
 
-.catalog__price-min {
-  grid-column: 1/2;
-}
-
+.catalog__price-min,
 .catalog__price-max {
-  grid-column: 3/-1;
+  width: 40%;
+  height: fit-content;
+}
+
+.catalog__price-input {
+  width: 40%;
 }
 
 .catalog__max-button {
-}
-.catalog__milk-field {
-  border: none;
-  @include reset-flex-column-list(21px);
-  margin-bottom: 32px;
 }
 
 .catalog__milk-field-label {
@@ -107,10 +111,7 @@
 }
 .catalog__milk-field-input {
 }
-.catalog__country-fied {
-  border: none;
-  @include reset-flex-column-list(21px);
-}
+
 .catalog__country-field-label {
   @include filter-text;
 }
@@ -118,7 +119,7 @@
 }
 .catalog__button-wrapper {
   @include reset-flex-column-list(24px);
-  align-items: center;
+  margin: 0 auto;
   margin-bottom: 36px;
 
   @include media-min(md) {
@@ -236,7 +237,7 @@
   @include media-min(md) {
     min-width: 92px;
 
-    >svg {
+    > svg {
       display: none;
     }
 

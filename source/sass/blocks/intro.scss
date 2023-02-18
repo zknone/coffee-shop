@@ -4,8 +4,6 @@
   @include container;
   padding-top: 20px;
   padding-bottom: 60px;
-  display: flex;
-  justify-content: space-between;
   background-color: $back-flat-white;
 
   @include media-min(md) {
@@ -21,10 +19,15 @@
   }
 }
 
+.intro__wrapper {
+  @include sub-container;
+  display: flex;
+  justify-content: space-between;
+}
+
 .intro__swiper-card {
   position: relative;
   @include reset-flex-column-list(0);
-  @include sub-container;
 
   > picture {
     margin: 0 auto 10px;

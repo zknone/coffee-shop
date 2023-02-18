@@ -8,11 +8,11 @@
 }
 
 .catalog__wrapper {
+  @include sub-container;
   display: flex;
   flex-direction: column;
   padding: 0;
   margin: 0 auto;
-  @include sub-container;
   @include media-min(lg) {
     flex-direction: row;
     justify-content: space-between;
@@ -55,7 +55,7 @@
 
 .catalog__price-field {
   border: none;
-  margin: 0;
+  margin: 0 0 32px;
   padding: 0;
   display: grid;
   grid-template-columns: 40% 20% 40%;
@@ -99,6 +99,7 @@
 .catalog__milk-field {
   border: none;
   @include reset-flex-column-list(21px);
+  margin-bottom: 32px;
 }
 
 .catalog__milk-field-label {
@@ -162,8 +163,12 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include media-min(lg) {
+  @include media-min(dmd) {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media-min(xl) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 .catalog__product-item {
@@ -210,7 +215,6 @@
   list-style: none;
   justify-content: space-between;
   padding: 0;
-  @include sub-container;
   @include media-min(md) {
     justify-content: end;
   }

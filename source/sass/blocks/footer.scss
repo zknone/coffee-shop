@@ -7,9 +7,13 @@
 .footer__menu-section {
   display: none;
   @include media-min(md) {
-    @include reset-flex-list;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include media-min(lg) {
+    flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
 }
 
@@ -34,18 +38,26 @@
   }
   @include media-min(lg) {
     max-width: 320px;
+
     flex-direction: column;
   }
 }
 
-
 .footer__logo {
 }
 .footer__menu {
-  @include reset-flex-list(0);
+  display: grid;
+  column-gap: 30px;
+
+  @include media-min(lg) {
+    grid-template-columns: min(320px) min(320px) min(320px);
+  }
+
+  @include media-min(xl) {
+    grid-template-columns: min(400px) min(400px) min(400px);
+  }
 }
 .footer__menu-list {
-  width: 350px;
   @include reset-flex-column-list(0);
 }
 .footer__menu-list-header {

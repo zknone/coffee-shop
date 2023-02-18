@@ -10,10 +10,14 @@
 
   @include media-min(md) {
     padding-top: 60px;
+    padding-bottom: 0;
+    margin-bottom: 172px;
   }
 
-  @include media-min(md) {
+  @include media-min(lg) {
     padding-top: 30px;
+    padding-bottom: 70px;
+    margin-bottom: 0;
   }
 }
 
@@ -28,10 +32,10 @@
   }
 
   @include media-min(md) {
-    padding-bottom: 500px;
+    padding-bottom: 308px;
     > picture {
       position: absolute;
-      top: 223px;
+      top: 240px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -39,7 +43,7 @@
 
   @include media-min(lg) {
     column-gap: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
     flex-direction: row;
     > picture {
       position: initial;
@@ -88,6 +92,7 @@
 
 .intro__left-button,
 .intro__right-button {
+  padding: 0;
   border: none;
   background-color: transparent;
 }

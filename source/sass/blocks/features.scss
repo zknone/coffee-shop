@@ -7,12 +7,21 @@
   display: flex;
   flex-direction: column;
   background-color: $base-white;
+
+  @include media-min(md) {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+
+  @include media-min(lg) {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
 }
 
 .features__category {
   @include h4(center);
   margin-bottom: 4px;
-
 }
 .features__header {
   align-self: center;

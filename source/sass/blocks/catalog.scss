@@ -2,6 +2,9 @@
 
 .catalog {
   @include container;
+  padding-top: 50px;
+  padding-bottom: 44px;
+  background-color: $back-light-grey;
 }
 
 .catalog__wrapper {
@@ -20,7 +23,17 @@
   @include h4(center);
 }
 .catalog__header {
-  @include h1(center);
+  @include h2(center);
+  margin: 0 auto 20px;
+  width: 80%;
+
+  @include media-min(md) {
+    width: 100%;
+  }
+
+  @include media-min(lg) {
+    margin-bottom: 40px;
+  }
 }
 
 .catalog__filter-form {
@@ -31,7 +44,6 @@
 }
 .catalog__fieldset-wrapper {
   @include reset-flex-column-list(0);
-  margin: 0 auto;
   @include media-min(md) {
     flex-direction: row;
   }
@@ -49,8 +61,11 @@
   grid-template-columns: 40% 20% 40%;
 }
 
-.catalog__price-field-header {
+.catalog__price-field-header,
+.catalog__milk-field-header,
+.catalog__country-field-header {
   @include label;
+  margin-bottom: 20px;
 }
 
 .catalog__price-input {
@@ -85,9 +100,7 @@
   border: none;
   @include reset-flex-column-list(21px);
 }
-.catalog__milk-field-header {
-  @include label;
-}
+
 .catalog__milk-field-label {
   @include filter-text;
 }
@@ -97,22 +110,39 @@
   border: none;
   @include reset-flex-column-list(21px);
 }
-.catalog__country-field-header {
-  @include label;
-}
 .catalog__country-field-label {
   @include filter-text;
 }
 .catalog__country-field-input {
 }
 .catalog__button-wrapper {
-  margin: 0 auto;
+  @include reset-flex-column-list(24px);
+  align-items: center;
+  margin-bottom: 36px;
+
+  @include media-min(md) {
+    flex-direction: row;
+    row-gap: 33px;
+    margin-bottom: 52px;
+  }
+
+  @include media-min(lg) {
+    row-gap: 18px;
+  }
 }
 .catalog__submit-button {
   @include btn;
+  min-width: 160px;
+  width: fit-content;
+  @include media-min(md) {
+    min-width: 150px;
+  }
 }
 
 .catalog__reset-button {
+  @include btn;
+  min-width: 160px;
+  width: fit-content;
 }
 .catalog__sorting {
   display: block;
@@ -140,10 +170,10 @@
   padding: 30px;
   display: grid;
   grid-template-columns: 40% 60%;
-  max-width: 280px;
-  margin: 0 auto;
+  background-color: $base-white;
+  border-radius: 4px;
+  align-self: center;
   @include media-min(md) {
-    max-width: 349px;
     grid-template-columns: 45% 55%;
   }
 
@@ -179,6 +209,7 @@
   display: flex;
   list-style: none;
   justify-content: space-between;
+  padding: 0;
   @include sub-container;
   @include media-min(md) {
     justify-content: end;

@@ -11,9 +11,22 @@
 
 .features__category {
   @include h4(center);
+  margin-bottom: 4px;
+
 }
 .features__header {
+  align-self: center;
   @include h2(center);
+  margin-bottom: 36px;
+
+  @include media-min(md) {
+    width: 80%;
+    margin-bottom: 60px;
+  }
+
+  @include media-min(md) {
+    margin-bottom: 80px;
+  }
 }
 .features__list {
   display: flex;
@@ -21,16 +34,19 @@
   list-style: none;
   flex-wrap: wrap;
   justify-content: center;
+  row-gap: 32px;
   padding: 0;
   margin: 0 auto;
   @include media-min(md) {
     flex-direction: row;
+    row-gap: 50px;
+    column-gap: 30px;
     width: auto;
   }
 }
 .features__item {
   @include media-min(md) {
-    max-width: 40%;
+    column-gap: 75px;
   }
 }
 .features__item-icon {
@@ -43,5 +59,7 @@
 }
 
 .features__item-text {
-  @include text;
+  @include feature-text;
+  margin: 0 auto;
+  width: 70%;
 }

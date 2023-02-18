@@ -72,3 +72,23 @@
   font-size: $small-text-size;
   line-height: $small-text-lh;
 }
+
+@mixin feature-text {
+  @include reset;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: $text-size-mobile;
+  line-height: $text-lh-mobile;
+  text-align: center;
+  color: $base-black;
+
+  @include media-min(md) {
+    font-size: $text-size;
+    line-height: $text-lh;
+    text-align: left;
+  }
+
+  @include media-min(lg) {
+    text-align: center;
+  }
+}

@@ -2,31 +2,63 @@
 
 .intro {
   @include container;
+  padding-top: 20px;
+  padding-bottom: 60px;
   display: flex;
   justify-content: space-between;
   background-color: $back-flat-white;
-  padding-top: 20px;
-  padding-bottom: 60px;
+
   @include media-min(md) {
     padding-top: 60px;
-    padding-bottom: 308px;
+  }
+
+  @include media-min(md) {
+    padding-top: 30px;
   }
 }
 
 .intro__swiper-card {
   position: relative;
-}
+  @include reset-flex-column-list(0);
+  @include sub-container;
 
-.intro__swiper-img {
-  position: relative;
+  > picture {
+    margin: 0 auto 10px;
+    padding: 0;
+  }
+
+  @include media-min(md) {
+    padding-bottom: 500px;
+    > picture {
+      position: absolute;
+      top: 223px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @include media-min(lg) {
+    column-gap: 30px;
+    padding-bottom: 50px;
+    flex-direction: row;
+    > picture {
+      position: initial;
+      transform: translateX(0);
+    }
+  }
 }
 
 .intro__swiper-text-block {
-  @include reset-flex-column-list;
+  @include reset-flex-column-list(0);
   align-items: center;
   @include media-min(lg) {
     align-items: flex-start;
+    justify-content: center;
   }
+}
+
+.intro__swiper-img {
+  max-width: 600px;
 }
 
 .intro__conversion-button {
@@ -35,12 +67,15 @@
 
 .intro__swiper-category {
   @include h4;
+  margin-bottom: 4px;
 }
 .intro__swiper-header {
   @include h1;
+  margin-bottom: 10px;
 }
 .intro__swiper-description {
   @include slider-text;
+  margin-bottom: 20px;
 }
 .intro__conversion-wrapper {
   @include reset-flex-list;
@@ -51,8 +86,8 @@
 .intro__actual-price {
 }
 
-.intro__left-button {
-}
-
+.intro__left-button,
 .intro__right-button {
+  border: none;
+  background-color: transparent;
 }

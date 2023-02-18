@@ -2,6 +2,8 @@
 
 .features {
   @include container;
+  padding-top: 50px;
+  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   background-color: $base-white;
@@ -19,6 +21,7 @@
   list-style: none;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0;
   margin: 0 auto;
   @include media-min(md) {
     flex-direction: row;

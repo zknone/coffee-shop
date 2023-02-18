@@ -1,7 +1,6 @@
 @import "../global/variables";
 
 @mixin container {
-  box-sizing: border-box;
   min-width: map-get($widths, xs);
   margin: 0 auto;
   padding-right: $gap-sm;
@@ -19,5 +18,15 @@
   }
   @include media-min(xl) {
     width: map-get($widths, xl);
+  }
+}
+
+@mixin sub-container {
+  max-width: map-get($widths, xs);
+  @include media-min(md) {
+    max-width: map-get($widths, md);
+  }
+  @include media-min(lg) {
+    max-width: map-get($widths, lg);
   }
 }

@@ -6,6 +6,17 @@
   justify-content: space-between;
 }
 
+.header__container {
+  width: map-get($widths, xs);
+
+  @include media-min(md) {
+    width: map-get($widths, md);
+  }
+  @include media-min(lg) {
+    width: map-get($widths, lg);
+  }
+}
+
 .header__logo-wrapper {
   display: flex;
   align-items: center;

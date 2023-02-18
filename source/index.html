@@ -85,7 +85,17 @@
       </h1>
       <section class="intro">
         <h2 class="visually-hidden">Наши новинки</h2>
-        <button class="intro__left-button"></button>
+        <button class="intro__left-button">
+          <svg
+            class="intro__swiper-icon"
+            aria-label="Листать свайпер влево."
+            width="11"
+            height="20"
+            focusable="true"
+          >
+            <use xlink:href="./img/icons/stack.svg#swiper-back"></use>
+          </svg>
+        </button>
         <div class="intro__swiper-card">
           <picture>
             <source
@@ -162,7 +172,17 @@
             </div>
           </div>
         </div>
-        <button class="intro__right-button"></button>
+        <button class="intro__right-button">
+          <svg
+            class="intro__swiper-icon"
+            aria-label="Листать свайпер влево."
+            width="11"
+            height="20"
+            focusable="true"
+          >
+            <use xlink:href="./img/icons/stack.svg#swiper-forward"></use>
+          </svg>
+        </button>
       </section>
       <section class="features">
         <p class="features__category">Преимущества</p>
@@ -235,129 +255,136 @@
         <h2 class="catalog__header">Каталог кофейных напитков</h2>
         <div class="catalog__wrapper">
           <form action="post" class="catalog__filter-form">
-            <fieldset class="catalog__price-field">
-              <legend class="catalog__price-field-header">Цена</legend>
-              <label class="catalog__price-range">
-                <span class="visually-hidden">Ползунок с плавающей ценой</span>
-                <button class="catalog__min-button"></button>
-                <input
-                  type="range"
-                  class="catalog__price-range"
-                  min="0"
-                  max="1000"
-                />
-                <button class="catalog__max-button"></button>
-              </label>
-              <label class="catalog__price-min">
-                <span class="visually-hidden">Минимальная цена</span>
-                <input
-                  type="number"
-                  class="catalog__price-input"
-                  placeholder="0"
-                  id="catalog-min-price"
-                />
-              </label>
-              <label class="catalog__price-max">
-                <span class="visually-hidden">Максимальная цена</span>
-                <input
-                  type="number"
-                  class="catalog__price-input"
-                  placeholder="900"
-                  id="catalog-max-price"
-                />
-              </label>
-            </fieldset>
-            <fieldset class="catalog__milk-field">
-              <legend class="catalog__milk-field-header">Наличие молока</legend>
-              <label class="catalog__milk-field-label">
-                <input
-                  type="radio"
-                  class="catalog__milk-field-input"
-                  name="milk-type"
-                  id="indifferent"
-                />
-                Неважно
-              </label>
-              <label class="catalog__milk-field-label">
-                <input
-                  type="radio"
-                  class="catalog__milk-field-input"
-                  name="milk-type"
-                  id="animal"
-                />
-                Только животное
-              </label>
-              <label class="catalog__milk-field-label">
-                <input
-                  type="radio"
-                  class="catalog__milk-field-input"
-                  name="milk-type"
-                  id="vegetal"
-                />
-                Только растительное
-              </label>
-              <label class="catalog__milk-field-label">
-                <input
-                  type="radio"
-                  class="catalog__milk-field-input"
-                  name="milk-type"
-                  id="no-milk"
-                  disabled
-                />
-                Без молока
-              </label>
-            </fieldset>
-            <fieldset class="catalog__country-fied">
-              <legend class="catalog__country-field-header">
-                Страна произрастания
-              </legend>
-              <label class="catalog__country-field-label">
-                <input
-                  class="catalog__country-field-input"
-                  type="checkbox"
-                  name="coiuntry"
-                  id="brasil"
-                />
-                Бразилия
-              </label>
-              <label class="catalog__country-field-label">
-                <input
-                  class="catalog__country-field-input"
-                  type="checkbox"
-                  name="coiuntry"
-                  id="ethiopia"
-                />
-                Эфиопия
-              </label>
-              <label class="catalog__country-field-label">
-                <input
-                  class="catalog__country-field-input"
-                  type="checkbox"
-                  name="coiuntry"
-                  id="colombia"
-                />
-                Колумбия
-              </label>
-              <label class="catalog__country-field-label">
-                <input
-                  class="catalog__country-field-input"
-                  type="checkbox"
-                  name="coiuntry"
-                  id="costa-rica"
-                />
-                Коста-Рика
-              </label>
-              <label class="catalog__country-field-label">
-                <input
-                  class="catalog__country-field-input"
-                  type="checkbox"
-                  name="coiuntry"
-                  id="peru"
-                  disabled
-                />
-                Перу
-              </label>
-            </fieldset>
+            <div class="catalog__fieldset-wrapper">
+              <fieldset class="catalog__price-field">
+                <legend class="catalog__price-field-header">Цена</legend>
+                <label class="catalog__price-range">
+                  <span class="visually-hidden"
+                    >Ползунок с плавающей ценой</span
+                  >
+                  <button class="catalog__min-button"></button>
+                  <input
+                    type="range"
+                    class="catalog__price-range"
+                    min="0"
+                    max="1000"
+                  />
+                  <button class="catalog__max-button"></button>
+                </label>
+                <label class="catalog__price-min">
+                  <span class="visually-hidden">Минимальная цена</span>
+                  <input
+                    type="number"
+                    class="catalog__price-input"
+                    placeholder="0"
+                    id="catalog-min-price"
+                  />
+                </label>
+                <label class="catalog__price-max">
+                  <span class="visually-hidden">Максимальная цена</span>
+                  <input
+                    type="number"
+                    class="catalog__price-input"
+                    placeholder="900"
+                    id="catalog-max-price"
+                  />
+                </label>
+              </fieldset>
+              <fieldset class="catalog__milk-field">
+                <legend class="catalog__milk-field-header">
+                  Наличие молока
+                </legend>
+                <label class="catalog__milk-field-label">
+                  <input
+                    type="radio"
+                    class="catalog__milk-field-input"
+                    name="milk-type"
+                    id="indifferent"
+                  />
+                  Неважно
+                </label>
+                <label class="catalog__milk-field-label">
+                  <input
+                    type="radio"
+                    class="catalog__milk-field-input"
+                    name="milk-type"
+                    id="animal"
+                  />
+                  Только животное
+                </label>
+                <label class="catalog__milk-field-label">
+                  <input
+                    type="radio"
+                    class="catalog__milk-field-input"
+                    name="milk-type"
+                    id="vegetal"
+                  />
+                  Только растительное
+                </label>
+                <label class="catalog__milk-field-label">
+                  <input
+                    type="radio"
+                    class="catalog__milk-field-input"
+                    name="milk-type"
+                    id="no-milk"
+                    disabled
+                  />
+                  Без молока
+                </label>
+              </fieldset>
+              <fieldset class="catalog__country-fied">
+                <legend class="catalog__country-field-header">
+                  Страна произрастания
+                </legend>
+                <label class="catalog__country-field-label">
+                  <input
+                    class="catalog__country-field-input"
+                    type="checkbox"
+                    name="coiuntry"
+                    id="brasil"
+                  />
+                  Бразилия
+                </label>
+                <label class="catalog__country-field-label">
+                  <input
+                    class="catalog__country-field-input"
+                    type="checkbox"
+                    name="coiuntry"
+                    id="ethiopia"
+                  />
+                  Эфиопия
+                </label>
+                <label class="catalog__country-field-label">
+                  <input
+                    class="catalog__country-field-input"
+                    type="checkbox"
+                    name="coiuntry"
+                    id="colombia"
+                  />
+                  Колумбия
+                </label>
+                <label class="catalog__country-field-label">
+                  <input
+                    class="catalog__country-field-input"
+                    type="checkbox"
+                    name="coiuntry"
+                    id="costa-rica"
+                  />
+                  Коста-Рика
+                </label>
+                <label class="catalog__country-field-label">
+                  <input
+                    class="catalog__country-field-input"
+                    type="checkbox"
+                    name="coiuntry"
+                    id="peru"
+                    disabled
+                  />
+                  Перу
+                </label>
+              </fieldset>
+            </div>
+
             <div class="catalog__button-wrapper">
               <button type="submit" class="catalog__submit-button">
                 Применить фильтр
@@ -642,8 +669,18 @@
             <ul class="catalog__pagination" id="catalog-pagination">
               <li class="catalog__pagination-item">
                 <button class="catalog__pagination-back-button">
-                  <svg class="catalog__pagination-back-button-icon"></svg>
-                  Назад
+                  <svg
+                    class="catalog__pagination-button-icon"
+                    aria-label="Перемещение по пагинации товаров назад."
+                    width="10"
+                    height="6"
+                    focusable="true"
+                  >
+                    <use
+                      xlink:href="./img/icons/stack.svg#pagination-back"
+                    ></use>
+                  </svg>
+                  <span>Назад</span>
                 </button>
               </li>
               <li class="catalog__pagination-number-element">
@@ -656,9 +693,19 @@
                 <a href="" class="catalog__pagination-item-link">3</a>
               </li>
               <li class="catalog__pagination-item">
-                <button class="catalog__pagination-back-button">
-                  <svg class="catalog__pagination-forward-button-icon"></svg>
-                  Вперед
+                <button class="catalog__pagination-forward-button">
+                  <svg
+                    class="catalog__pagination-button-icon"
+                    aria-label="Перемещение по пагинации товаров вперед."
+                    width="10"
+                    height="6"
+                    focusable="true"
+                  >
+                    <use
+                      xlink:href="./img/icons/stack.svg#pagination-forward"
+                    ></use>
+                  </svg>
+                  <span>Вперед</span>
                 </button>
               </li>
             </ul>
@@ -711,7 +758,7 @@
               <a href="#" class="footer__social-item-link">
                 <svg
                   class="footer__social-item-icon"
-                  aria-label="Иконка однокласники." 
+                  aria-label="Иконка однокласники."
                   width="20"
                   height="20"
                   focusable="true"

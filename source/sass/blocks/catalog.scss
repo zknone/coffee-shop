@@ -142,7 +142,7 @@
 }
 
 .catalog__reset-button {
-  @include btn;
+  @include reset-btn;
   min-width: 160px;
   width: fit-content;
 }

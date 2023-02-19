@@ -39,7 +39,7 @@
   display: block;
   margin: 0;
   width: 100%;
-  padding: 20px 0;
+  padding: 20px;
   text-align: center;
   font-size: $header-link-size;
   line-height: $header-link-lh;
@@ -88,5 +88,22 @@
 
   &:active {
     color: $alt-darker;
+  }
+}
+
+
+@mixin social-icon-link {
+  padding: 20px;
+  background-color: transparent;
+  color: $base-grey;
+
+  &:hover,
+  :focus {
+    color: $base-primary;
+    background-color: $base-secondary;
+  }
+
+  &:active {
+    color: $base-primary;
   }
 }

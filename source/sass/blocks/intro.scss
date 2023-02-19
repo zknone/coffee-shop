@@ -65,7 +65,9 @@
 }
 
 .intro__swiper-img {
-  max-width: 600px;
+  @include media-min(md) {
+    max-width: 600px;
+  }
 }
 
 .intro__conversion-button {

@@ -80,3 +80,7 @@
   @include reset-flex-list;
   align-items: center;
 }
+
+.footer__social-item-link {
+  @include social-icon-link;
+}

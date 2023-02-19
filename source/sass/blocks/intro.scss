@@ -90,8 +90,10 @@
   align-items: center;
 }
 .intro__previous-price {
+  @include ex-price;
 }
 .intro__actual-price {
+  @include price;
 }
 
 .intro__left-button {

@@ -11,6 +11,11 @@
       integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
       crossorigin=""
     />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -46,23 +51,25 @@
       </div>
       <ul class="header__nav-list header__nav-list--opened">
         <li class="header__nav-item">
-          <a href="" class="header__nav-item-link header__nav-item-link--active"
+          <a
+            href="./index.html"
+            class="header__nav-item-link header__nav-item-link--active"
             >Главная</a
           >
         </li>
         <li class="header__nav-item">
-          <a href="" class="header__nav-item-link"> Каталог</a>
+          <a href="#" class="header__nav-item-link">Каталог</a>
         </li>
         <li class="header__nav-item">
-          <a href="" class="header__nav-item-link">Доставка</a>
+          <a href="#" class="header__nav-item-link">Доставка</a>
         </li>
         <li class="header__nav-item">
-          <a href="" class="header__nav-item-link">О нас</a>
+          <a href="#" class="header__nav-item-link">О нас</a>
         </li>
       </ul>
       <ul class="header__utility-list">
         <li class="header__utiliy-item">
-          <a href="" class="header__utility-link" id="utility-link-enter">
+          <a href="#" class="header__utility-link" id="utility-link-enter">
             <svg
               class="header__utility-icon"
               aria-label="Иконка каталога."
@@ -76,7 +83,7 @@
           </a>
         </li>
         <li class="header__utiliy-item">
-          <a href="" class="header__utility-link" id="utility-link-shop">
+          <a href="#" class="header__utility-link" id="utility-link-shop">
             <svg
               class="header__utility-icon"
               aria-label="Иконка корзины."
@@ -678,13 +685,13 @@
                 </button>
               </li>
               <li class="catalog__pagination-number-element">
-                <a href="" class="catalog__pagination-item-link">1</a>
+                <a href="#" class="catalog__pagination-item-link">1</a>
               </li>
               <li class="catalog__pagination-number-element">
-                <a href="" class="catalog__pagination-item-link">2</a>
+                <a href="#" class="catalog__pagination-item-link">2</a>
               </li>
               <li class="catalog__pagination-number-element">
-                <a href="" class="catalog__pagination-item-link">3</a>
+                <a href="#" class="catalog__pagination-item-link">3</a>
               </li>
               <li class="catalog__pagination-item">
                 <button class="catalog__pagination-forward-button">
@@ -708,7 +715,7 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__map"></div>
+      <div class="footer__map" id="map"></div>
       <div class="footer__menu-section">
         <div class="footer__logo-social-wrapper">
           <div class="footer__logo-wrapper">
@@ -794,10 +801,12 @@
           <ul class="footer__menu-list">
             <h4 class="footer__menu-list-header">Контакты</h4>
             <li class="footer__menu-list-item">
-              <span>Санкт-Петербург, набережная реки Карповки, дом 5</span>
+              <span class="footer__menu-list-item-address"
+                >Санкт-Петербург, набережная реки Карповки, дом 5</span
+              >
             </li>
             <li class="footer__menu-list-item">
-              <a href="">
+              <a class="footer__menu-tel-link" href="+7(999)999-99-99">
                 <span>+7 (999) 999-99-99</span>
               </a>
             </li>
@@ -806,11 +815,6 @@
       </div>
     </footer>
     <script src="./js/script.js" defer></script>
-    <script
-      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-      crossorigin=""
-    ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>

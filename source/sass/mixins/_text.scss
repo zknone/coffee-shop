@@ -95,5 +95,15 @@
 
 
 @mixin price {
-  
+  @include reset;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: $text-slider-size;
+  line-height: $text-slider-lh;
+  color: $base-black;
+}
+
+@mixin ex-price {
+  @include price;
+  text-decoration: line-through;
 }

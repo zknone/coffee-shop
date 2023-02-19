@@ -74,9 +74,9 @@
   font-family: "Montserrat", Helvetica, sans-serif;
   display: block;
   margin: 0;
-  padding: 8px 0;
+  padding: 0;
   text-transform: uppercase;
-  font-size: $footer-link-size;
+  font-size: $footer-link-size; 
   line-height: $footer-link-lh;
   background-color: $base-white;
   color: $base-black;

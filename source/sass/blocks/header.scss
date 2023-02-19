@@ -42,6 +42,14 @@
   }
 }
 
+.header__nav-item {
+  border-top: 2px solid $base-secondary;
+  &:last-child {
+    border-bottom: 2px solid $base-secondary;
+  }
+}
+
+
 .header__nav-item-link {
   @include menu-link;
 }
@@ -82,7 +90,6 @@
   order: 3;
   width: 100%;
   display: none;
-
   &--opened {
     display: flex;
   }

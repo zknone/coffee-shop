@@ -13,11 +13,6 @@
   background-color: $base-white;
   color: $base-black;
 
-  &:hover,
-  :focus {
-    color: $base-primary;
-  }
-
   &:active {
     color: $base-primary;
     background-color: $base-secondary;
@@ -25,12 +20,28 @@
 
   &--active {
     color: $base-primary;
-    border-bottom: 2px solid $base-primary;
+    background-color: $base-secondary;
   }
 
   @include media-min(md) {
     padding: 32px 20px;
     width: auto;
+
+    &:hover,
+    :focus {
+      color: $base-primary;
+    }
+
+    &:active {
+      color: $base-primary;
+      background-color: $base-secondary;
+    }
+
+    &--active {
+      color: $base-primary;
+      background-color: $base-white;
+      border-bottom: 2px solid $base-primary;
+    }
   }
 }
 
@@ -76,7 +87,7 @@
   margin: 0;
   padding: 0;
   text-transform: uppercase;
-  font-size: $footer-link-size; 
+  font-size: $footer-link-size;
   line-height: $footer-link-lh;
   background-color: $base-white;
   color: $base-black;

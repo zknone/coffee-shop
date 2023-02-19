@@ -11,8 +11,6 @@
   @return "(max-width: #{$width - 1})";
 }
 
-// здесь он считает брейкпоинты по моему словарю
-
 @mixin media-min($min-breakpoint-name) {
   @media #{min-width($min-breakpoint-name)} {
     @content;

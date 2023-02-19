@@ -60,15 +60,59 @@
   }
 }
 .features__item {
+  @include reset-flex-column-list(4px);
+  padding: 60px 0 0;
   @include media-min(md) {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: repeat(2, 1fr);
+    row-gap: 10px;
+    padding: 0 0 0 82px;
   }
 
   @include media-min(lg) {
-    display: flex;
-    flex-direction: column;
+    padding: 72px 0 0;
+  }
+
+  &--speed-item {
+    background: url("/img/speed-icon.svg") 50% 0 no-repeat;
+    @include media-min(md) {
+      background-position: 10px 12px;
+    }
+
+    @include media-min(lg) {
+      background-position: 50% 0;
+    }
+  }
+
+  &--fit-item {
+    background: url("/img/fit-icon.svg") 50% 0 no-repeat;
+    @include media-min(md) {
+      background-position: 10px 12px;
+    }
+
+    @include media-min(lg) {
+      background-position: 50% 0;
+    }
+  }
+
+  &--energy-item {
+    background: url("/img/energy-icon.svg") 50% 0 no-repeat;
+    @include media-min(md) {
+      background-position: 10px 12px;
+    }
+
+    @include media-min(lg) {
+      background-position: 50% 0;
+    }
+  }
+
+  &--eco-item {
+    background: url("/img/eco-icon.svg") 50% 0 no-repeat;
+    @include media-min(md) {
+      background-position: 10px 12px;
+    }
+
+    @include media-min(lg) {
+      background-position: 50% 0;
+    }
   }
 }
 .features__item-icon {

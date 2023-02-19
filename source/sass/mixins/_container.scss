@@ -19,7 +19,6 @@
   @include media-min(xl) {
     min-width: map-get($widths, xl);
   }
-
 }
 
 @mixin sub-container {

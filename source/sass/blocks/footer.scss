@@ -84,3 +84,7 @@
 .footer__social-item-link {
   @include social-icon-link;
 }
+
+.footer__social-item-icon {
+  display: block;
+}

@@ -21,19 +21,28 @@
   }
 }
 
-@mixin sub-container {
-  margin: 0 auto;
-  max-width: map-get($widths, xs);
+@mixin no-padding-conntainer {
+  @include container;
+  padding-right: 0;
+  padding-left: 0;
+
   @include media-min(md) {
-    max-width: map-get($widths, md);
-  }
-  @include media-min(dmd) {
-    max-width: map-get($widths, dmd);
+    padding-right: 0;
+    padding-left: 0;
   }
   @include media-min(lg) {
-    max-width: map-get($widths, lg);
+    padding-right: 0;
+    padding-left: 0;
   }
-  @include media-min(xl) {
-    max-width: map-get($widths, xl);
+}
+
+@mixin adaptive-width {
+  margin: 0 auto;
+  max-width: calc(map-get($widths, md) - $gap-sm - $gap-sm);
+  @include media-min(md) {
+    max-width: calc(map-get($widths, lg) - $gap-md - $gap-md);
+  }
+  @include media-min(lg) {
+    max-width: calc(map-get($widths, xl) - $gap-lg - $gap-lg);
   }
 }

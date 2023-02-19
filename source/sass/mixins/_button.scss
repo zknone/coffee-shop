@@ -43,3 +43,58 @@
   color: $base-primary;
   background-color: $base-white;
 }
+
+@mixin slider-button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  min-width: $gap-sm;
+
+  @include media-min(md) {
+    min-width: $gap-md;
+  }
+
+  @include media-min(md) {
+    min-width: $gap-lg;
+  }
+  &:hover,
+  :focus {
+    background-image: linear-gradient(
+      90deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  &:active {
+    background-image: linear-gradient(
+      90deg,
+      rgba(120, 89, 207, 0.25) 0%,
+      rgba(120, 89, 207, 0) 100%
+    );
+  }
+
+  &:disabled {
+    color: $base-grey;
+  }
+}
+
+@mixin slider-revert-button {
+  @include slider-button;
+  &:hover,
+  :focus {
+    background-image: linear-gradient(
+      270deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  &:active {
+    background-image: linear-gradient(
+      270deg,
+      rgba(120, 89, 207, 0.25) 0%,
+      rgba(120, 89, 207, 0) 100%
+    );
+  }
+}

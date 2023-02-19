@@ -1,33 +1,29 @@
 @import "../mixins/mixins";
 
 .intro {
-  @include container;
-  padding-top: 20px;
-  padding-bottom: 60px;
   background-color: $back-flat-white;
 
   @include media-min(md) {
-    padding-top: 60px;
-    padding-bottom: 0;
     margin-bottom: 172px;
   }
 
   @include media-min(lg) {
-    padding-top: 30px;
-    padding-bottom: 70px;
     margin-bottom: 0;
   }
 }
 
 .intro__wrapper {
-  @include sub-container;
+  @include no-padding-conntainer;
   display: flex;
   justify-content: space-between;
 }
 
 .intro__swiper-card {
+  @include adaptive-width;
   position: relative;
   @include reset-flex-column-list(0);
+  padding-top: 20px;
+  padding-bottom: 60px;
 
   > picture {
     margin: 0 auto 10px;
@@ -35,10 +31,12 @@
   }
 
   @include media-min(md) {
+    padding-top: 60px;
     padding-bottom: 308px;
+
     > picture {
       position: absolute;
-      top: 240px;
+      top: 308px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -46,7 +44,8 @@
 
   @include media-min(lg) {
     column-gap: 30px;
-    padding-bottom: 0px;
+    padding-top: 30px;
+    padding-bottom: 70px;
     flex-direction: row;
     > picture {
       position: initial;
@@ -95,9 +94,10 @@
 .intro__actual-price {
 }
 
-.intro__left-button,
+.intro__left-button {
+  @include slider-button;
+}
+
 .intro__right-button {
-  padding: 0;
-  border: none;
-  background-color: transparent;
+  @include slider-revert-button;
 }

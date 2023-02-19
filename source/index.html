@@ -5,6 +5,16 @@
     <title>Название проекта</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -36,7 +46,9 @@
       </div>
       <ul class="header__nav-list header__nav-list--opened">
         <li class="header__nav-item">
-          <a href="" class="header__nav-item-link header__nav-item-link--active">Главная</a>
+          <a href="" class="header__nav-item-link header__nav-item-link--active"
+            >Главная</a
+          >
         </li>
         <li class="header__nav-item">
           <a href="" class="header__nav-item-link"> Каталог</a>
@@ -83,7 +95,6 @@
           </button>
         </li>
       </ul>
- 
     </header>
     <main>
       <h1 class="visually-hidden">
@@ -230,37 +241,48 @@
             <div class="catalog__fieldset-wrapper">
               <fieldset class="catalog__price-field">
                 <legend class="catalog__price-field-header">Цена</legend>
-                <label class="catalog__price-range">
-                  <span class="visually-hidden"
-                    >Ползунок с плавающей ценой</span
-                  >
-                  <button class="catalog__min-button"></button>
-                  <input
-                    type="range"
-                    class="catalog__price-range"
-                    min="0"
-                    max="1000"
-                  />
-                  <button class="catalog__max-button"></button>
-                </label>
-                <label class="catalog__price-min">
-                  <span class="visually-hidden">Минимальная цена</span>
-                  <input
-                    type="number"
-                    class="catalog__price-input"
-                    placeholder="0"
-                    id="catalog-min-price"
-                  />
-                </label>
-                <label class="catalog__price-max">
-                  <span class="visually-hidden">Максимальная цена</span>
-                  <input
-                    type="number"
-                    class="catalog__price-input"
-                    placeholder="900"
-                    id="catalog-max-price"
-                  />
-                </label>
+                <div class="catalog__range">
+                  <div class="catalog__range-scale">
+                    <div class="catalog__range-bar" style="width: 167px">
+                      <button
+                        class="catalog__range-toggle catalog__toggle-min"
+                        type="button"
+                      >
+                        <span class="visually-hidden"
+                          >Изменить минимальную цену.</span
+                        >
+                      </button>
+                      <button
+                        class="catalog__range-toggle catalog__toggle-max"
+                        type="button"
+                      >
+                        <span class="visually-hidden"
+                          >Изменить максимальную цену.</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__price-input-wrapper">
+                  <label class="catalog__price-min">
+                    <span class="visually-hidden">Минимальная цена</span>
+                    <input
+                      type="number"
+                      class="catalog__price-input"
+                      placeholder="0"
+                      id="catalog-min-price"
+                    />
+                  </label>
+                  <label class="catalog__price-max">
+                    <span class="visually-hidden">Максимальная цена</span>
+                    <input
+                      type="number"
+                      class="catalog__price-input"
+                      placeholder="900"
+                      id="catalog-max-price"
+                    />
+                  </label>
+                </div>
               </fieldset>
               <fieldset class="catalog__milk-field">
                 <legend class="catalog__milk-field-header">
@@ -645,7 +667,7 @@
                     class="catalog__pagination-button-icon"
                     aria-label="Перемещение по пагинации товаров назад."
                     width="10"
-                    height="6"
+                    height="10"
                     focusable="true"
                   >
                     <use
@@ -670,7 +692,7 @@
                     class="catalog__pagination-button-icon"
                     aria-label="Перемещение по пагинации товаров вперед."
                     width="10"
-                    height="6"
+                    height="10"
                     focusable="true"
                   >
                     <use
@@ -784,5 +806,11 @@
       </div>
     </footer>
     <script src="./js/script.js" defer></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>

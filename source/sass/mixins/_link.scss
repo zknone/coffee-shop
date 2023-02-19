@@ -92,8 +92,11 @@
 }
 
 @mixin social-icon-link {
-  padding: 20px;
+  display: block;
+  padding: 10px;
+  margin: 0;
   background-color: transparent;
+  border-radius: 4px;
   color: $base-grey;
 
   &:hover,
@@ -104,5 +107,50 @@
 
   &:active {
     color: $base-primary;
+    background-color: $alt-opace;
+  }
+}
+
+@mixin pagination-number-button {
+  background-color: $base-white;
+  color: $base-primary;
+
+  &:hover,
+  :focus {
+    background-color: $alt-lighter;
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $alt-darker;
+    color: $base-white;
+  }
+  &:disabled {
+    background-color: $back-light-grey;
+  }
+
+  &--current {
+    font-weight: 600;
+    color: $base-black;
+    background-color: transparent;
+  }
+}
+
+@mixin pagination-icon-button {
+  background-color: $base-white;
+  color: $base-primary;
+
+  &:hover,
+  :focus {
+    background-color: $alt-lighter;
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $alt-darker;
+    color: $base-white;
+  }
+  &:disabled {
+    background-color: $back-light-grey;
   }
 }

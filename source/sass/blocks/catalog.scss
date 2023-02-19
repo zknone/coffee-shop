@@ -8,12 +8,13 @@
 }
 
 .catalog__wrapper {
-  @include sub-container;
+  @include adaptive-width;
   display: flex;
   flex-direction: column;
   padding: 0;
   margin: 0 auto;
   @include media-min(lg) {
+    column-gap: 30px;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -44,12 +45,13 @@
 }
 .catalog__fieldset-wrapper {
   @include reset-flex-column-list(0);
-  justify-content: space-between;
+  width: 100%;
+  align-items: center;
   @include media-min(md) {
     flex-direction: row;
+    justify-content: space-between;
   }
   @include media-min(lg) {
-    margin: 0;
     flex-direction: column;
     column-gap: 22px;
   }
@@ -61,8 +63,14 @@
   flex-direction: row;
   margin: 0 0 auto;
   padding: 0;
-  max-width: 290px;
   border: none;
+  width: 280px;
+  @include media-min(md) {
+    width: 220px;
+  }
+  @include media-min(lg) {
+    width: 320px;
+  }
 }
 
 .catalog__milk-field,
@@ -70,6 +78,13 @@
   border: none;
   @include reset-flex-column-list(21px);
   margin: 0 0 auto;
+  width: 280px;
+  @include media-min(md) {
+    width: 220px;
+  }
+  @include media-min(lg) {
+    width: 320px;
+  }
 }
 
 .catalog__price-field-header,
@@ -88,19 +103,93 @@
   background-color: $back-light-grey;
 }
 
-.catalog__price-range {
-  width: 100%;
-  height: fit-content;
+.catalog__range-scale {
+  position: relative;
+  width: 280px;
+  height: 4px;
+  background-color: $alt-grey;
+  margin-bottom: 25px;
+  @include media-min(md) {
+    margin-bottom: 22px;
+    width: 220px;
+  }
+  @include media-min(lg) {
+    width: 320px;
+  }
+}
+.catalog__range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: $alt-lighter;
+}
+.catalog__range-toggle {
+  position: absolute;
+  background: $base-white;
+  border-radius: 50%;
+  border: 2px solid $alt-lighter;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+  &:active,
+  :focus {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+}
+.catalog__toggle-min {
+  top: -9px;
+}
+
+.catalog__toggle-max {
+  top: -9px;
+  left: 157px;
+}
+
+.catalog__price-input-wrapper {
+  width: 280px;
+  @include reset-flex-list(0);
+  justify-content: space-between;
+
+  @include media-min(md) {
+    width: 220px;
+  }
+
+  @include media-min(lg) {
+    width: 320px;
+  }
 }
 
 .catalog__price-min,
 .catalog__price-max {
   width: 40%;
-  height: fit-content;
+}
+.catalog__price-min {
+  &:after {
+    display: block;
+    position: relative;
+    content: "";
+    width: 9px;
+    height: 2px;
+    background-color: $base-grey;
+    left: 100%;
+    top: -50%;
+    transform: translateX(25px);
+
+    @include media-min(md) {
+      transform: translateX(17px);
+    }
+  }
 }
 
 .catalog__price-input {
-  width: 40%;
+  width: 100%;
+  padding: 7px 10px;
 }
 
 .catalog__max-button {
@@ -119,31 +208,31 @@
 }
 .catalog__button-wrapper {
   @include reset-flex-column-list(24px);
-  margin: 0 auto;
   margin-bottom: 36px;
+  align-items: center;
 
   @include media-min(md) {
     flex-direction: row;
     row-gap: 33px;
     margin-bottom: 52px;
+    justify-content: center;
   }
 
   @include media-min(lg) {
     row-gap: 18px;
+    width: 320px;
   }
 }
+
 .catalog__submit-button {
   @include btn;
-  min-width: 160px;
+  padding: 14px 5px;
   width: fit-content;
-  @include media-min(md) {
-    min-width: 150px;
-  }
 }
 
 .catalog__reset-button {
   @include reset-btn;
-  min-width: 160px;
+  padding: 14px 5px;
   width: fit-content;
 }
 .catalog__sorting {
@@ -181,10 +270,6 @@
   align-self: center;
   @include media-min(md) {
     grid-template-columns: 45% 55%;
-  }
-
-  @include media-min(lg) {
-    max-width: 319px;
   }
 
   > picture {
@@ -226,17 +311,16 @@
 .catalog__pagination-forward-button {
   border: none;
   @include text;
+  @include pagination-icon-button;
   min-width: 40px;
   min-height: 40px;
-  background-color: $base-white;
-  color: $base-primary;
+  border-radius: 4px;
   > span {
     display: none;
   }
 
   @include media-min(md) {
     min-width: 92px;
-
     > svg {
       display: none;
     }
@@ -252,17 +336,12 @@
 }
 .catalog__pagination-item-link {
   @include text;
+  @include pagination-number-button;
+  border-radius: 4px;
   display: block;
   min-width: 40px;
   min-height: 40px;
   padding: 8px;
-  background-color: $base-white;
-  color: $base-primary;
-
-  &--active {
-    background-color: $base-grey;
-    color: $base-black;
-  }
 }
 .catalog__pagination-forward-button-icon {
 }

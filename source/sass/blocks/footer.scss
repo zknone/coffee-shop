@@ -128,8 +128,28 @@
   }
 }
 .footer__html-academy-link {
+  justify-content: center;
   display: flex;
-  &> picture {
-    margin: 0 auto;
+  @include text;
+  color: $base-grey;
+  @include media-min(md) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &:hover,
+  :focus {
+    color: $base-primary;
+  }
+
+  &:active {
+    color: $alt-darker;
+  }
+  & > span {
+    padding-right: 10px;
+  }
+
+  & > svg {
+    margin: auto 0;
   }
 }

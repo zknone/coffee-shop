@@ -834,21 +834,16 @@
           href="https://htmlacademy.ru/intensive/adaptive"
           class="footer__html-academy-link"
         >
-          <picture>
-            <source
-              media="(min-width: 1440px)"
-              srcset="./img/academy-desktop.svg"
-              width="206"
-              height="16"
-            />
-            <img
-              class="footer__html-academy-logo"
-              src="./img/academy-tablet.svg"
-              alt="Разработано в Хтмл Академии."
-              width="206"
-              height="16"
-            />
-          </picture>
+          <span>Разработано в HTML academy</span>
+          <svg
+            class="footer__html-academy-link-logo"
+            aria-label="Иконка однокласники."
+            width="20"
+            height="20"
+            focusable="true"
+          >
+            <use xlink:href="./img/icons/stack.svg#logo-html-academy"></use>
+          </svg>
         </a>
       </div>
     </footer>

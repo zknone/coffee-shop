@@ -204,9 +204,6 @@
   border-radius: 4px;
 }
 
-.catalog__max-button {
-}
-
 .catalog__milk-field-label,
 .catalog__country-field-label {
   position: relative;
@@ -390,9 +387,6 @@
 
 .catalog__sorting-header {
   @include label;
-}
-
-.catalog__sorting-option {
 }
 
 .catalog__products-wrapper {

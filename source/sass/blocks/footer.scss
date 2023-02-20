@@ -7,12 +7,14 @@
     @include container;
     display: flex;
     flex-direction: column;
+    margin-bottom: 38px;
   }
 
   @include media-min(lg) {
     padding-top: 45px;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 28px;
   }
 }
 
@@ -42,8 +44,6 @@
   }
 }
 
-.footer__logo {
-}
 .footer__menu {
   @include reset-flex-list();
   column-gap: 30px;
@@ -99,7 +99,7 @@
 
 .footer__map {
   height: 420px;
-  
+
   @include media-min(md) {
     height: 480px;
   }
@@ -118,5 +118,18 @@
     display: inline-block;
     content: url(../../img/phone-icon.svg);
     margin-right: 7px;
+  }
+}
+
+.footer__html-academy-section {
+  display: none;
+  @include media-min(md) {
+    display: block;
+  }
+}
+.footer__html-academy-link {
+  display: flex;
+  &> picture {
+    margin: 0 auto;
   }
 }

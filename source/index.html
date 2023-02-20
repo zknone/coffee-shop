@@ -49,7 +49,7 @@
           Интернет-магазин кофейных напитков
         </span>
       </div>
-      <span class="visuallty-hidden">Меню в хедере.</span>
+      <span class="visually-hidden">Меню в хедере.</span>
       <ul class="header__nav-list header__nav-list--opened">
         <li class="header__nav-item">
           <a
@@ -112,7 +112,7 @@
       <section class="intro">
         <div class="intro__wrapper">
           <h2 class="visually-hidden">Наши новинки.</h2>
-          <button class="intro__left-button">
+          <button class="intro__swiper-left-button">
             <svg
               class="intro__swiper-icon"
               aria-label="Листать свайпер влево."
@@ -123,83 +123,85 @@
               <use xlink:href="./img/icons/stack.svg#swiper-back"></use>
             </svg>
           </button>
-          <div class="intro__swiper-card">
-            <picture>
-              <source
-                media="(min-width: 1440px)"
-                type="image/webp"
-                srcset="
-                  ./img/flat-white-desktop.webp    1x,
-                  ./img/flat-white-desktop@2x.webp 2x
-                "
-                width="600"
-                height="600"
-              />
-              <source
-                media="(min-width: 768px)"
-                type="image/webp"
-                srcset="
-                  ./img/flat-white-tablet.webp    1x,
-                  ./img/flat-white-tablet@2x.webp 2x
-                "
-                width="476"
-                height="476"
-              />
-              <source
-                type="image/webp"
-                srcset="
-                  ./img/flat-white-mobile.webp    1x,
-                  ./img/flat-white-mobile@2x.webp 2x
-                "
-                width="280"
-                height="280"
-              />
-              <source
-                media="(min-width: 1440px)"
-                srcset="
-                  ./img/flat-white-desktop.png    1x,
-                  ./img/flat-white-desktop@2x.png 2x
-                "
-                width="600"
-                height="600"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="
-                  ./img/flat-white-tablet.png    1x,
-                  ./img/flat-white-tablet@2x.png 2x
-                "
-                width="476"
-                height="476"
-              />
-              <img
-                class="intro__swiper-img"
-                src="./img/flat-white-mobile.png"
-                srcset="
-                  ./img/flat-white-mobile.png    1x,
-                  ./img/flat-white-mobile@2x.png 2x
-                "
-                alt="Изображение банки с флетвайтом."
-                width="280"
-                height="280"
-              />
-            </picture>
-            <div class="intro__swiper-text-block">
-              <p class="intro__swiper-category">Новинка!</p>
-              <h3 class="intro__swiper-header">Декаф Флэт Уайт</h3>
-              <p class="intro__swiper-description">
-                Свежесваренный кофе без кофеина из Эфиопии с натуральным
-                фермерским молоком — то, что нужно для расслабления после
-                тяжёлого рабочего дня
-              </p>
-              <div class="intro__conversion-wrapper">
-                <span class="intro__previous-price">295₽</span>
-                <span class="intro__actual-price">225₽</span>
-                <button class="intro__conversion-button">Заказать</button>
+          <div class="intro__swiper-wrapper">
+            <div class="intro__swiper-card">
+              <picture>
+                <source
+                  media="(min-width: 1440px)"
+                  type="image/webp"
+                  srcset="
+                    ./img/flat-white-desktop.webp    1x,
+                    ./img/flat-white-desktop@2x.webp 2x
+                  "
+                  width="600"
+                  height="600"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                  srcset="
+                    ./img/flat-white-tablet.webp    1x,
+                    ./img/flat-white-tablet@2x.webp 2x
+                  "
+                  width="476"
+                  height="476"
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./img/flat-white-mobile.webp    1x,
+                    ./img/flat-white-mobile@2x.webp 2x
+                  "
+                  width="280"
+                  height="280"
+                />
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="
+                    ./img/flat-white-desktop.png    1x,
+                    ./img/flat-white-desktop@2x.png 2x
+                  "
+                  width="600"
+                  height="600"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/flat-white-tablet.png    1x,
+                    ./img/flat-white-tablet@2x.png 2x
+                  "
+                  width="476"
+                  height="476"
+                />
+                <img
+                  class="intro__swiper-img"
+                  src="./img/flat-white-mobile.png"
+                  srcset="
+                    ./img/flat-white-mobile.png    1x,
+                    ./img/flat-white-mobile@2x.png 2x
+                  "
+                  alt="Изображение банки с флетвайтом."
+                  width="280"
+                  height="280"
+                />
+              </picture>
+              <div class="intro__swiper-text-block">
+                <p class="intro__swiper-category">Новинка!</p>
+                <h3 class="intro__swiper-header">Декаф Флэт Уайт</h3>
+                <p class="intro__swiper-description">
+                  Свежесваренный кофе без кофеина из Эфиопии с натуральным
+                  фермерским молоком — то, что нужно для расслабления после
+                  тяжёлого рабочего дня
+                </p>
+                <div class="intro__conversion-wrapper">
+                  <span class="intro__previous-price">295₽</span>
+                  <span class="intro__actual-price">225₽</span>
+                  <button class="intro__conversion-button">Заказать</button>
+                </div>
               </div>
             </div>
           </div>
-          <button class="intro__right-button">
+          <button class="intro__swiper-right-button">
             <svg
               class="intro__swiper-icon"
               aria-label="Листать свайпер вправо."
@@ -423,7 +425,7 @@
               </select>
             </div>
             <ul class="catalog__products-list">
-              <li><span class="visuallty-hidden">Наши товары.</span></li>
+              <li><span class="visually-hidden">Наши товары.</span></li>
               <li class="catalog__product-item">
                 <picture>
                   <source

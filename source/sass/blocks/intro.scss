@@ -18,6 +18,8 @@
   justify-content: space-between;
 }
 
+
+
 .intro__swiper-card {
   @include adaptive-width;
   position: relative;
@@ -96,10 +98,10 @@
   @include price;
 }
 
-.intro__left-button {
+.intro__swiper-left-button {
   @include slider-button;
 }
 
-.intro__right-button {
+.intro__swiper-right-button {
   @include slider-revert-button;
 }

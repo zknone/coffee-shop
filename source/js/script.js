@@ -18,4 +18,15 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
-L.marker([59.9686902, 30.3174989], {icon: icon}).addTo(map).openPopup();
+L.marker([59.9686902, 30.3174989], { icon: icon }).addTo(map).openPopup();
+
+  // import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
+
+  // const swiper = new Swiper('.swiper', {
+  //   direction: "horizontal",
+  //   // Navigation arrows
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   }
+  // });

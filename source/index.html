@@ -96,12 +96,13 @@
             <span class="header__utility-link"> Корзина </span>
           </a>
         </li>
-        <li class="header__utility-item">
-          <button class="header__utility-item-burger" id="burger-button">
-            <span>Открыть/закрыть меню</span>
-          </button>
-        </li>
+        <!-- <li class="header__utility-item"> -->
+
+        <!-- </li> -->
       </ul>
+      <button class="header__utility-item-burger" id="burger-button">
+        <span>Открыть/закрыть меню</span>
+      </button>
     </header>
     <main>
       <h1 class="visually-hidden">
@@ -302,7 +303,8 @@
                     name="milk-type"
                     id="indifferent"
                   />
-                  Неважно
+                  <span class="catalog__milk-field-control-mark"></span>
+                  <span class="catalog__milk-field-text">Неважно</span>
                 </label>
                 <label class="catalog__milk-field-label">
                   <input
@@ -311,7 +313,8 @@
                     name="milk-type"
                     id="animal"
                   />
-                  Только животное
+                  <span class="catalog__milk-field-control-mark"></span>
+                  <span class="catalog__milk-field-text">Только животное</span>
                 </label>
                 <label class="catalog__milk-field-label">
                   <input
@@ -320,7 +323,8 @@
                     name="milk-type"
                     id="vegetal"
                   />
-                  Только растительное
+                  <span class="catalog__milk-field-control-mark"></span>
+                  <span class="catalog__milk-field-text">Только растительное</span>
                 </label>
                 <label class="catalog__milk-field-label">
                   <input
@@ -330,7 +334,8 @@
                     id="no-milk"
                     disabled
                   />
-                  Без молока
+                  <span class="catalog__milk-field-control-mark"></span>
+                  <span class="catalog__milk-field-text">Без молока</span>
                 </label>
               </fieldset>
               <fieldset class="catalog__country-field">
@@ -396,17 +401,21 @@
             </div>
           </form>
           <div class="catalog__products-wrapper">
-            <select name="sort-by" id="sorting" class="catalog__sorting">
-              <option value="default" class="catalog__sorting-option">
-                По умолчанию
-              </option>
-              <option value="price-up" class="catalog__sorting-option">
-                Цена, по возрастанию
-              </option>
-              <option value="price-down" class="catalog__sorting-option">
-                Цена, по убыванию/option>
-              </option>
-            </select>
+            <div class="catalog__sorting-wrapper">
+              <h3 class="catalog__sorting-header">Сортировка:</h3>
+              <select name="sort-by" id="sorting" class="catalog__sorting">
+                <option value="default" class="catalog__sorting-option">
+                  По умолчанию
+                </option>
+                <option value="price-up" class="catalog__sorting-option">
+                  Цена, по возрастанию
+                </option>
+                <option value="price-down" class="catalog__sorting-option">
+                  Цена, по убыванию/option>
+                </option>
+              </select>
+            </div>
+
             <ul class="catalog__products-list">
               <li class="catalog__product-item">
                 <picture>

@@ -199,15 +199,68 @@
 .catalog__price-input {
   width: 100%;
   padding: 7px 10px;
+
+  border: 2px solid $alt-lighter;
+  border-radius: 4px;
 }
 
 .catalog__max-button {
 }
 
 .catalog__milk-field-label {
+  position: relative;
   @include filter-text;
+  display: inline-flex;
 }
 .catalog__milk-field-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.catalog__milk-field-control-mark {
+  position: absolute;
+  top: 0;
+  width: 24px;
+  height: 24px;
+
+  outline: 0;
+
+  border: 2px solid $base-grey;
+  border-radius: 20px;
+  background: $base-white;
+}
+
+.catalog__milk-field-text {
+  padding-left: 30px;
+}
+
+.catalog__milk-field-input:checked + .catalog__milk-field-control-mark {
+  border: 2px solid $alt-lighter;
+}
+
+.catalog__milk-field-input:checked + .catalog__milk-field-control-mark::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  border-radius: 9px;
+  background-color: $alt-lighter;
+  z-index: 2;
+}
+
+.catalog__milk-field-input:disabled + .catalog__milk-field-control-mark {
+  border-color: $alt-grey;
+}
+.catalog__milk-field-input:disabled ~ .catalog__milk-field-text {
+  color: $base-grey;
 }
 
 .catalog__country-field-label {
@@ -249,12 +302,31 @@
   width: fit-content;
 }
 .catalog__sorting {
+  @include text;
+  font-weight: 600;
   display: block;
   margin: 0 auto;
+  border: none;
+  width: 160px;
+  padding: 4px 10px;
+  color: $base-primary;
+  background-color: transparent;
   @include media-min(md) {
+    width: 166px;
     margin: 0 0 0 auto;
   }
 }
+
+.catalog__sorting-wrapper {
+  @include reset-flex-list;
+  margin-bottom: 20px;
+  align-items: baseline;
+}
+
+.catalog__sorting-header {
+  @include label;
+}
+
 .catalog__sorting-option {
 }
 

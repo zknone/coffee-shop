@@ -207,12 +207,14 @@
 .catalog__max-button {
 }
 
-.catalog__milk-field-label {
+.catalog__milk-field-label,
+.catalog__country-field-label {
   position: relative;
   @include filter-text;
   display: inline-flex;
 }
-.catalog__milk-field-input {
+.catalog__milk-field-input,
+.catalog__country-field-input {
   position: absolute;
   left: 0;
   top: 0;
@@ -235,8 +237,58 @@
   background: $base-white;
 }
 
+.catalog__country-field-control-mark {
+  position: absolute;
+  top: 0;
+  width: 42px;
+  height: 24px;
+
+  outline: 0;
+
+  border: 2px solid $base-grey;
+  border-radius: 20px;
+  background: $base-grey;
+}
+
 .catalog__milk-field-text {
   padding-left: 30px;
+}
+
+.catalog__country-field-text {
+  padding-left: 50px;
+}
+
+.catalog__country-field-input:checked + .catalog__country-field-control-mark {
+  background-color: $alt-lighter;
+  border: 2px solid $alt-lighter;
+}
+
+.catalog__country-field-input + .catalog__country-field-control-mark::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  border-radius: 9px;
+  background-color: $base-white;
+  outline: 2px solid $base-grey;
+  z-index: 2;
+}
+
+.catalog__country-field-input:checked
+  + .catalog__country-field-control-mark::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  left: 18px;
+  border-radius: 9px;
+  background-color: $base-white;
+  outline: 2px solid $alt-lighter;
+  z-index: 2;
 }
 
 .catalog__milk-field-input:checked + .catalog__milk-field-control-mark {
@@ -263,11 +315,24 @@
   color: $base-grey;
 }
 
-.catalog__country-field-label {
-  @include filter-text;
+.catalog__country-field-input:disabled + .catalog__country-field-control-mark {
+  border-color: $alt-grey;
+  background-color: $alt-grey;
+  color: $alt-grey;
 }
-.catalog__country-field-input {
+
+.catalog__country-field-input:disabled
+  + .catalog__country-field-control-mark::after {
+  background-color: $base-white;
+  outline-color: $alt-grey;
+  color: $alt-grey;
 }
+
+.catalog__country-field-input:disabled ~ .catalog__country-field-text {
+  border-color: $alt-grey;
+  color: $alt-grey;
+}
+
 .catalog__button-wrapper {
   @include reset-flex-column-list(24px);
   margin-bottom: 36px;
